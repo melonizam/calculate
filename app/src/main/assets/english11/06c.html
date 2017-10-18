@@ -1,0 +1,173 @@
+<html>
+
+
+<body>
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3> Kruskal-Wallis Test Calculator</h3>
+                    <p style="word-break: break-all;"></p>
+                    <hr>
+                    <div class="clearfix"></div>  <div class='clear'></div>
+                    <form name=first>
+                        <div id="overlayLoader">
+                            <div class="loader"> </div>
+                        </div>
+                        <div id="dispCalcConts">
+                            <table border=1 cellspacing="0" cellpadding="6" bordercolor="#cccccc">
+                                <tr align=center valign=top>
+                                    <td nowrap><span>Sample A</span></td>
+                                    <td nowrap><span>Sample B</span></td>
+                                    <td nowrap><span>Sample C</span></td>
+
+                                    </font></td><form name="jjx">
+                                <tr align=center valign=top>
+                                    <td><input type="text" class="form-control"></td><form name="jjy">
+                                    <td><input type="text" class="form-control"></td><form name="jjz">
+                                    <td><input type="text" class="form-control"></td>
+                            </table>
+                    </form>
+                    <hr size="1" color="#cccccc">
+
+                    <br />
+
+                    <i>Data Entry</i>
+                    <table border=1 cellspacing=0 cellpadding=2 bordercolor="#cccccc">
+                        <tr>
+                            <td></td>
+                            <td align=Center  colspan="3" class="bkg1">&nbsp;Ranks for Sample&nbsp;</td>
+                            <td rowspan=3></td>
+                            <td align=Center  colspan="3" class="bkg1">&nbsp;Raw Data for Sample&nbsp;</td>
+                        <tr>
+                            <td align=Center class="bkg1"><font face="verdana, arial"><font color="FFFFFF">&nbsp;count&nbsp;</font></td>
+                            <td align=Center class="bkg1">A</td>
+                            <td align=Center class="bkg1">B</td>
+                            <td align=Center class="bkg1">C</td>
+                            <td align=Center class="bkg1">A</td>
+                            <td align=Center class="bkg1">B</td>
+                            <td align=Center class="bkg1">C</td>
+                            <form name="enumerate">
+                        <tr>
+                            <td align=Center valign=Top >
+                                <script language="JavaScript">
+	for (var i=0; i<max; i++) {
+	document.write('<INPUT TYPE=Text SIZE="5" placeholder="12" class="form-control" VALUE=""><br />');
+	}
+	document.write("</form>");
+	for (var i=0; i<max; i++) {
+	document.enumerate.elements[i].value = i+1}
+	</script></td><form name="x_vals">
+                            <td align=Center  valign=Top>
+                                <script language="JavaScript">
+	for (var i=0; i<ka; i++) {
+	document.write('<INPUT TYPE=Text SIZE="8" placeholder="12" class="form-control" VALUE=""><br />');
+	}
+	document.write("</form>");
+	for (var i=0; i<ka; i++) {
+	document.x_vals.elements[i].value = "";
+	}
+	</script></td><form name="y_vals">
+                            <td align=Center valign=Top>
+                                <script language="JavaScript">
+	for (var i=0; i<kb; i++) {
+	document.write('<INPUT TYPE=Text SIZE="8" placeholder="12" class="form-control" VALUE=""><br />')};
+	document.write("</form>");
+	for (var i=0; i<kb; i++) {
+	document.y_vals.elements[i].value = "";
+	}
+	</script></td><form name="z_vals">
+                            <td align=Center valign=Top>
+                                <script language="JavaScript">
+	for (var i=0; i<kc; i++) {
+	document.write('<INPUT TYPE=Text SIZE="8" placeholder="12" class="form-control" VALUE=""><br />')};
+	document.write("</form>");
+	for (var i=0; i<kc; i++) {
+	document.z_vals.elements[i].value = "";
+	}
+	</script></td><form name="rawx">
+                            <td align=Center  valign=Top>
+                                <script language="JavaScript">
+	for (var i=0; i<ka; i++) {
+	document.write('<INPUT TYPE=Text SIZE="8" placeholder="12" class="form-control" VALUE=""><br />');
+	}
+	document.write("</form>");
+	for (var i=0; i<ka; i++) {
+	document.rawx.elements[i].value = "";
+	}
+	</script></td><form name="rawy">
+                            <td align=Center valign=Top>
+                                <script language="JavaScript">
+	for (var i=0; i<kb; i++) {
+	document.write('<INPUT TYPE=Text SIZE="8" placeholder="12" class="form-control" VALUE=""><br />')};
+	document.write("</form>");
+	for (var i=0; i<kb; i++) {
+	document.rawy.elements[i].value = "";
+	}
+	</script></td><form name="rawz">
+                            <td align=Center valign=Top>
+                                <script language="JavaScript">
+	for (var i=0; i<kc; i++) {
+	document.write('<INPUT TYPE=Text SIZE="8" placeholder="12" class="form-control" VALUE=""><br />')};
+	document.write("</form>");
+	for (var i=0; i<kc; i++) {
+	document.rawz.elements[i].value = "";
+	}
+	</script></td><form>
+                        <tr align=center>
+                            <td colspan=3><input type=Button value="Calculate from Ranks" class="initial2 btn" onClick="calc()"></td>
+                            <td>
+                            <td colspan=3><input type=Button value="Calculate from Raw Data" class="initial2 btn" onClick="calc2()"><br />
+                    </table></td></form>
+                    <br>
+                    <table border=0 cellspacing=1 cellpadding=2>
+                        <tr>
+                            <td align=Center  colspan="3" class="bkg1"><font face="verdana, arial">&nbsp;Mean Ranks for Sample&nbsp;</td>
+                        <tr>
+                            <td align=Center class="bkg1"><font face="verdana, arial">A</td>
+                            <td align=Center class="bkg1"><font face="verdana, arial">B</td>
+                            <td align=Center class="bkg1"><font face="verdana, arial">C</td><form name="meana">
+                        <tr valign="top">
+                            <td align=Center><input type=Text size="8" class="form-control" value=""></td></form><form name="meanb">
+                            <td align=Center><input type=Text size="8" class="form-control" value=""></td></form><form name="meanc">
+                            <td align=Center><input type=Text size="8" class="form-control" value=""></td>
+                            <td width=15></td></form>
+                            <td align=right>H = </td><form name="csq">
+                            <td align=left><input type=Text size="12" class="form-control" value=""></td>
+                        <tr valign="top">
+                            <td colspan=4></td></form>
+                            <td align=right>df = </td><form name="df">
+                            <td align=left><input type=Text size="12" class="form-control" value=""></td>
+                        <tr valign="top">
+                            <td colspan=4></td></form>
+                            <td align=right>P = *</td><form name="p">
+                            <td align=left><input type=Text size="12" class="form-control" value=""><font face="verdana, arial"></td>
+                    </table></form>
+
+                    </form>
+                </div>
+                <!-- ec_calculator ends -->
+                <div class="clear"> </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+</body>
+</html>

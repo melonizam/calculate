@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/interplanetary"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/interstellar"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Plan" />
+        <item
+            android:id="@+id/intergalactic"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/interuniverse"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Share" />
+        <item
+            android:id="@+id/inter"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Notification" />
+
+        <item
+            android:id="@+id/interuniver"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="About Us" />
+        <item
+            android:id="@+id/interunierse"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Help?" />
+    </group>
+
+    <item android:title="Like Us On">
+        <menu>
+
+            <item
+                android:id="@+id/nav_home"
+                app:actionLayout="@layout/homelayout" />
+        </menu>
+    </item>
+
+</menu>

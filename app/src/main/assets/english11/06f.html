@@ -1,0 +1,279 @@
+<html>
+
+<body>
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>F-Test Calculator</h3>
+                    <p style="word-break: break-all;">Calculate the F value in which the test statistics has an F-distribution under the null hypothesis. In ANOVA, F-test is used to determine group of trial which differs significantly from an expected value.</p>
+                    <hr>
+
+                    <div class="ec_calculator_gen clearfix">
+
+                        <div class="clearfix"></div>  <div class='clear'></div>
+                        <form name=first>
+                            <div id="overlayLoader">
+                                <div class="loader"> </div>
+                            </div>
+                            <div id="dispCalcConts"><div class='group clearfix'>
+                                <div class="formrow">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label>Enter First Set of Values (Eg:2,3,4,5)</label></div>
+                                        <div class="col-md-8"><input type=text id=m1 onkeypress='return isNumberKey(event)' class='form-control'>
+                                        </div></div></div></div>
+                                <div class='group clearfix'>
+                                    <div class="formrow">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label>Enter Second Set of Values (Eg:4,5,6,7)</label></div>
+                                            <div class="col-md-8"><input type=text id=m2 onkeypress='return isNumberKey(event)' class='form-control'></div>
+                                        </div></div></div>
+
+                                <div class='group clearfix'>
+                                    <div class="formrow">
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class='group clearfix' align=center>
+                                                <div class="col-md-2"> <input type=button name=bncompute value=Calculate onClick=meann1() class="form-control"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='result'>
+                                    <div class='group clearfix'>
+                                        <div class='group clearfix'>
+                                            <div class="formrow">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label>F-VALUE</label></div>
+                                                    <div class="col-md-8"><input type=text id=tvalue readonly class='form-control'></div></div></div>
+                                        </div>
+                                    </div></div>  </form>
+                    </div>
+                </div>
+                <!-- ec_calculator ends -->
+                <div class="clear"> </div>
+                <script type="text/javascript">
+  var easyinputs = document.getElementsByTagName("INPUT");
+  for (var ies = 0; ies < easyinputs.length; ies++)
+  {
+      if (easyinputs[ies].type === 'button')
+      {
+    easyinputs[ies].style.visibility='hidden';
+    if ((easyinputs[ies].offsetTop-10)<0)
+    {
+      document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+    }
+    else
+    {
+      document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+    }
+      }
+      else
+      {
+    document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+      }
+      if (easyinputs[ies].type === 'reset')
+      {
+    easyinputs[ies].style.visibility='hidden';
+      }
+  }
+</script>
+                <script type="text/javascript">
+  var chf_rss=true;
+  function getPathFromUrl(url){return url.split("?")[0];}
+  var curUrl = window.location.pathname;
+  var basName = curUrl.replace(/^.*[\/\\]/g, '');
+  var curencyIndx = false;
+</script>
+                <script src="https://www.easycalculation.com/js/jquery.min.js?v0.1"></script>
+                <script src='https://www.easycalculation.com/common.js?v4.4'></script>
+                <script src='https://www.easycalculation.com/js/jquery.sticky.js'></script>
+                <!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+                <script language="javascript">
+var mean1,mean2,variance1,variance2,length1,length2;
+function checnum(as)
+{
+    var a = as.value;
+
+    for(var x=0; x<a.length; x++)
+    {
+        var ff = a[x];
+       if(isNaN(a)&& ff != "/" && ff != "-" && ff != "." )
+       {
+          a = a.substring(0,(a.length-1));
+          as.value = a;
+       }
+  }
+}
+function meann1()
+{
+
+ var str=$("#m1").val();
+
+ var strarray1,sum=0,sum1=0;
+ strarray1=str.split(",");
+  for(var i=0;i<strarray1.length;i++)
+    {
+      sum=sum+parseInt(strarray1[i]);
+
+    }
+
+ mean1=sum/strarray1.length;
+
+  for(var i=0;i<strarray1.length;i++)
+   {
+   sum1=sum1+Math.pow((mean1-parseInt(strarray1[i])),2);
+   }
+ variance1=sum1/strarray1.length;
+
+ length1=strarray1.length;
+ meann2();
+}
+function meann2()
+{
+ var str=$("#m2").val();
+ var strarray,sum=0,sum1=0;
+ strarray=str.split(",");
+ for(var i=0;i<strarray.length;i++)
+  {
+   sum=sum+parseInt(strarray[i]);
+  }
+ mean2=sum/strarray.length;
+
+ for(var i=0;i<strarray.length;i++)
+  {
+   sum1=sum1+Math.pow((mean2-parseInt(strarray[i])),2);
+  }
+ variance2=sum1/strarray.length;
+
+ length2=strarray.length;
+ tvalue();
+}
+function tvalue()
+{
+ var t=variance1/variance2;
+ $("#tvalue").val(t);
+}
+function cle()
+{
+ $("#m1").val("");
+ $("#m2").val("");
+$("#tvalue").val("");
+}
+
+function isNumberKey(evt)
+     {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57)&&(charCode!=44)&&(charCode!=46))
+           return false;
+
+        return true;
+     }
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+                <script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+
+
+                <!--script type="text/javascript" src="//www.easycalculation.com/commoncode/footer/chf_script.js?v.1"></script-->
+
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+function input_trace()
+{
+
+var str,i,sum=0,cubicsum=0,sd,dn,skew,mean;
+str=$("#m").val();
+str=str.split(",");
+mean=means(str);
+for(i=0;i<str.length;i++)
+{
+   a=parseFloat(str[i])-mean;//(value-mean)
+   sum=sum+Math.pow(a,2);//(value-mean)^2
+   cubicsum=cubicsum+cube(a);//finding the cubic sum of (value-mean)
+}
+sd=Math.sqrt(sum/(str.length-1));//computing standard deviation
+dn=(str.length-1)*cube(sd);//computing (no of values-1)*sd?^3
+skew=cubicsum/dn;//computing the skew
+$("#sv").val(Math.round(skew*100)/100);
+}
+function means(strarray)
+{
+   var sum=0,meanvalue;
+   for(var i=0;i<strarray.length;i++)
+     {
+  sum+=parseFloat(strarray[i]);
+     }
+   meanvalue=sum/strarray.length;
+   return meanvalue;
+}
+function cube(num)
+{
+return num*num*num;
+}
+
+function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 &&(charCode < 48 || charCode > 57)&&(charCode!=44)&&(charCode!=46))
+            return false;
+
+         return true;
+      }
+
+function clear_values()
+{
+$("#m").val("");
+$("#sv").val("");
+}
+
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+</body>
+</html>

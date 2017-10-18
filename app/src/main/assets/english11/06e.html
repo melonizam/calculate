@@ -1,0 +1,1041 @@
+<html>
+<body>
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Anova (Analysis of Variance) Calculation</h3>
+                    <p style="word-break: break-all;">                  </p>
+                    <hr>
+
+                    <div class="ec_calculator_gen clearfix">
+                        <!-- <h2>One Way Anova (Analysis of Variance) Calculation</h2> -->
+                        <div class="clearfix"></div>  <div class='clear'></div>
+                        <form name=first>
+                            <div id="overlayLoader">
+                                <div class="loader"> </div>
+                            </div>
+                            <div id="dispCalcConts">
+                                <div class='group clearfix'>
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label> x1  </label>
+                                        </div></div>
+
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x1 &sup2; </label>
+                                        </div></div>
+
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x2 </label></div>
+                                    </div>
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x2&sup2; </label>
+                                        </div></div>
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x3 </label></div>
+                                    </div>
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x3&sup2; </label>
+                                        </div></div>
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x4 </label></div>
+                                    </div>
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x4&sup2; </label></div>
+                                    </div>
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x5 </label></div>
+                                    </div>
+                                    <div class='group_con group_small'>
+                                        <div class="col-md-1" align="center">
+                                            <label>x5&sup2; </label></div>
+                                    </div></div>
+
+                                <div class='group clearfix'>
+                                    <div class="col-md-1">
+                                        <input type=text id=x11 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx11 class='easypositive form-control' style='margin: 1px;' readonly></div>
+                                    <div class="col-md-1"><input type=text id=x21 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx21 class='easypositive form-control' style='margin: 1px;' readonly></div>
+                                    <div class="col-md-1"><input type=text id=x31 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx31 class='easypositive form-control' style='margin: 1px;' readonly></div>
+                                    <div class="col-md-1"><input type=text id=x41 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx41 class='easypositive form-control' style='margin: 1px;' readonly></div>
+                                    <div class="col-md-1"><input type=text id=x51 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx51 class='easypositive form-control' style='margin: 1px;' readonly> </div>
+                                </div>
+
+                                <div class='group clearfix'>
+                                    <div class="col-md-1">
+                                        <input type=text id=x12 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text class='easypositive form-control' style='margin: 1px;' id=sx12 readonly></div>
+                                    <div class="col-md-1"><input type=text id=x22 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input class='easypositive form-control' style='margin: 1px;' type=text id=sx22 readonly></div>
+                                    <div class="col-md-1"><input type=text id=x32 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx32 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x42 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx42 class='easypositive form-control' style='margin: 1px;' readonly></div>
+                                    <div class="col-md-1"><input type=text id=x52 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text class='easypositive form-control' style='margin: 1px;' id=sx52 readonly></div>
+                                </div>
+
+                                <div class='group clearfix'>
+                                    <div class="col-md-1"><input type=text id=x13 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx13 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x23 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx23 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x33 class='easypositive form-control' style='margin: 1px;' ></div>
+                                    <div class="col-md-1"><input type=text id=sx33 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x43 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx43 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x53 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx53 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                </div>
+
+                                <div class='group clearfix'>
+
+                                    <div class="col-md-1"><input type=text id=x14 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx14 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x24 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx24 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x34 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx34 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x44 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx44 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x54 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx54 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                </div>
+
+                                <div class='group clearfix'>
+
+                                    <div class="col-md-1"><input type=text id=x15 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx15 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x25 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx25 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x35 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx35 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x45 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx45 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x55 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx55 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                </div>
+
+                                <div class='group clearfix'>
+                                    <div class="col-md-1"><input type=text id=x16 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx16 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x26 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx26 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x36 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx36 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x46 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx46 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x56 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx56 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                </div>
+
+                                <div class='group clearfix'>
+                                    <div class="col-md-1">
+                                        <input type=text id=x17 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx17 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x27 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx27 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x37 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx37 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x47 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx47 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x57 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx57 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                </div>
+
+                                <div class='group clearfix'>
+                                    <div class="col-md-1">
+                                        <input type=text id=x18 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx18 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x28 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx28 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x38 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx38 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x48 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx48 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=x58 class='easypositive form-control' style='margin: 1px;'></div>
+                                    <div class="col-md-1"><input type=text id=sx58 readonly class='easypositive form-control' style='margin: 1px;'></div>
+                                </div>
+
+                                <div class='group clearfix'>
+                                    <div class="formrow">
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <input type=button name=re value=Calculate onclick=calc() class='easypositive btn'></div></div></div>
+
+                                <div class='group clearfix'>
+                                    <div class='group_con group_stats'>
+                                        <label></label>
+                                    </div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <label> x1</label></div>
+                                    </div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <label>x2  </label>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <label>x3  </label>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <label>x4  </label>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <label>x5  </label></div>
+                                    </div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <label> Total  </label>
+                                        </div></div></div>
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con group_stats'>
+                                        <label> Number (n)  </label>
+                                    </div>
+                                    <br>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=n1 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=n2 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=n3 size=6  readonly class='easypositive form-control'>
+                                        </div>
+                                    </div>
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=n4 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=n5 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=tn size=6  readonly class='easypositive form-control'>
+                                        </div></div></div>
+
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con group_stats'>
+                                        <label> &#8721; x  </label>
+                                    </div>
+                                    <br>
+                                    <div class='group_con group_stats' >
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sx1 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sx2 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sx3 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sx4 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sx5 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=tsx size=6  readonly class='easypositive form-control'>
+                                        </div></div></div>
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con group_stats'>
+                                        <label> Mean   </label>
+                                    </div>
+                                    <br>
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=m1 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=m2 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=m3 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=m4 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=m5 size=6  readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=tm size=6  readonly class='easypositive form-control'>
+                                        </div></div></div>
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con group_stats'>
+                                        <label>&#8721; x&sup2;  </label>
+                                    </div>
+                                    <br>
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=ssx1 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=ssx2 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=ssx3 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=ssx4 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=ssx5 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=tssx size=6  readonly class='easypositive form-control'>
+                                        </div></div></div>
+
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con group_stats'>
+                                        <label> Variance </label>
+                                    </div>
+                                    <br>
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=v1 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=v2 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=v3 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=v4 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=v5 size=6 readonly class='easypositive form-control'>
+                                        </div></div></div>
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con group_stats'>
+                                        <label> Std. Dev. </label>
+                                    </div>
+                                    <br>
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sd1 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sd2 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sd3 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sd4 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=sd5 size=6 readonly class='easypositive form-control'>
+                                        </div></div></div>
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con group_stats'>
+                                        <label> Std. Err.  </label>
+                                    </div>
+                                    <br>
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=se1 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=se2 size=6 readonly class='easypositive form-control'>
+                                        </div> </div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=se3 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=se4 size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con group_stats'>
+                                        <div class="col-md-2" align="center">
+                                            <input type=text id=se5 size=6 readonly class='easypositive form-control'>
+                                        </div></div></div>
+                                <br>
+                                <div class='group clearfix' align='center'>
+                                    <b>ANOVA Result </b>
+                                </div>
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con'>
+                                        <label></label>
+                                    </div>
+                                    <br>
+                                    <div class='group_con'>
+                                        <div class="col-md-3" align="center">
+                                            <label> SS  </label>
+                                        </div></div>
+
+                                    <div class='group_con'>
+                                        <div class="col-md-3" align="center">
+                                            <label>df  </label>
+                                        </div></div>
+                                    <div class='group_con'>
+                                        <div class="col-md-3" align="center">
+                                            <label> MS  </label>
+                                        </div></div>
+                                    <div class='group_con'>
+                                        <div class="col-md-3" align="center">
+                                            <label> F  </label>
+                                        </div></div></div>
+                                <br>
+                                <div class='group clearfix'>
+                                    <div class='group_con'>
+                                        <label>  Between  </label>
+                                    </div>
+                                    <br>
+                                    <div class='group_con'>
+                                        <div class="col-md-3" align="center">
+                                            <input type=text id=bss size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con'>
+                                        <div class="col-md-3" align="center">
+                                            <input type=text id=bdf size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con'>
+                                        <div class="col-md-3" align="center">
+                                            <input type=text id=bms size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group_con'>
+                                        <div class="col-md-3" align="center">
+                                            <input type=text id=fra size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                    <div class='group clearfix'>
+                                        <br><br><br>
+                                        <div class='group_con'>
+                                            <label>  Within </label>
+                                        </div>
+                                        <br>
+                                        <div class='group_con'>
+                                            <div class="col-md-3" align="center">
+                                                <input type=text id=wss size=6 readonly class='easypositive form-control'>
+                                            </div></div>
+
+                                        <div class='group_con'>
+                                            <div class="col-md-3" align="center">
+                                                <input type=text id=wdf size=6 readonly class='easypositive form-control'>
+                                            </div></div>
+
+                                        <div class='group_con'><div class="col-md-3" align="center">
+                                            <input type=text id=wms size=6 readonly class='easypositive form-control'>
+                                        </div></div></div>
+                                    <br>
+                                    <div class='group clearfix'>
+                                        <div class='group_con'>
+                                            <label> Total </label>
+                                        </div>
+                                        <br>
+                                        <div class='group_con'><div class="col-md-3" align="center">
+                                            <input type=text id=tss size=6 readonly class='easypositive form-control'>
+                                        </div></div>
+
+                                        <div class='group_con'><div class="col-md-3" align="center">
+
+                                            <input type=text id=tdf size=6 readonly class='easypositive form-control'>
+                                        </div></div></div> </div> </form>
+                    </div>
+                    <!-- ec_calculator ends -->
+                    <div class="clear"> </div>
+                    <script type="text/javascript">
+  var easyinputs = document.getElementsByTagName("INPUT");
+  for (var ies = 0; ies < easyinputs.length; ies++)
+  {
+      if (easyinputs[ies].type === 'button')
+      {
+    easyinputs[ies].style.visibility='hidden';
+    if ((easyinputs[ies].offsetTop-10)<0)
+    {
+      document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+    }
+    else
+    {
+      document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+    }
+      }
+      else
+      {
+    document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+      }
+      if (easyinputs[ies].type === 'reset')
+      {
+    easyinputs[ies].style.visibility='hidden';
+      }
+  }
+</script>
+                    <script type="text/javascript">
+  var chf_rss=true;
+  function getPathFromUrl(url){return url.split("?")[0];}
+  var curUrl = window.location.pathname;
+  var basName = curUrl.replace(/^.*[\/\\]/g, '');
+  var curencyIndx = false;
+</script>
+                    <script src="https://epicalci.com/assets/js/jquery.min65e9.js?v0.1"></script>
+                    <script src='https://epicalci.com/assets/js/commond8be.js?v4.4'></script>
+                    <script src='https://epicalci.com/assets/js/jquery.sticky.js'></script>
+                    <!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+
+                    <script type="text/javascript">
+
+function calc()
+{
+
+  var x11 = $("#x11").val();    // alert(x11);
+  var x12 = $("#x12").val();
+  var x13 = $("#x13").val();
+  var x14 = $("#x14").val();
+  var x15 = $("#x15").val();
+  var x16 = $("#x16").val();
+  var x17 = $("#x17").val();
+  var x18 = $("#x18").val();
+
+  var x21 = $("#x21").val();
+  var x22 = $("#x22").val();
+  var x23 = $("#x23").val();
+  var x24 = $("#x24").val();
+  var x25 = $("#x25").val();
+  var x26 = $("#x26").val();
+  var x27 = $("#x27").val();
+  var x28 = $("#x28").val();
+
+  var x31 = $("#x31").val();
+  var x32 = $("#x32").val();
+  var x33 = $("#x33").val();
+  var x34 = $("#x34").val();
+  var x35 = $("#x35").val();
+  var x36 = $("#x36").val();
+  var x37 = $("#x37").val();
+  var x38 = $("#x38").val();
+
+  var x41 = $("#x41").val();
+  var x42 = $("#x42").val();
+  var x43 = $("#x43").val();
+  var x44 = $("#x44").val();
+  var x45 = $("#x45").val();
+  var x46 = $("#x46").val();
+  var x47 = $("#x47").val();
+  var x48 = $("#x48").val();
+
+  var x51 = $("#x51").val();
+  var x52 = $("#x52").val();
+  var x53 = $("#x53").val();
+  var x54 = $("#x54").val();
+  var x55 = $("#x55").val();
+  var x56 = $("#x56").val();
+  var x57 = $("#x57").val();
+  var x58 = $("#x58").val();
+
+  var n1 = 8;                             // Calculating Number of values in each group
+  var n2 = 8;
+  var n3 = 8;
+  var n4 = 8;
+  var n5 = 8;
+
+  for(var i=1;i<=8;i++)
+  {
+    var x1 = eval("x1"+i);
+    if (x1 == "")
+     {
+      n1 = n1 - 1;
+     }
+
+    var x2 = eval("x2"+i);
+    if (x2 == "")
+     {
+      n2 = n2 - 1;
+     }
+
+    var x3 = eval("x3"+i);
+    if (x3 == "")
+     {
+      n3 = n3 - 1;
+     }
+
+    var x4 = eval("x4"+i);
+    if (x4 == "")
+     {
+      n4 = n4 - 1;
+     }
+
+    var x5 = eval("x5"+i);
+    if (x5 == "")
+     {
+      n5 = n5 - 1;
+     }
+  }
+      var tn = parseFloat(n1) + parseFloat(n2) + parseFloat(n3) + parseFloat(n4) + parseFloat(n5);
+      $("#n1").val(n1);
+      $("#n2").val(n2);
+      $("#n3").val(n3);
+      $("#n4").val(n4);
+      $("#n5").val(n5);
+      $("#tn").val(tn);
+
+
+  var sx1 = 0;                                  // Sumation of all x values in each group
+  var sx2 = 0;
+  var sx3 = 0;
+  var sx4 = 0;
+  var sx5 = 0;
+
+  for (var i=1;i<=8;i++)
+  {
+    var x1 = eval("x1"+i);
+    if(x1 != 0)
+    {
+      sx1 = sx1 + parseFloat(x1);
+    }
+
+    var x2 = eval("x2"+i);
+    if(x2 != 0)
+    {
+      sx2 = sx2 + parseFloat(x2);
+    }
+
+    var x3 = eval("x3"+i);
+    if(x3 != 0)
+    {
+      sx3 = sx3 + parseFloat(x3);
+    }
+
+    var x4 = eval("x4"+i);
+    if(x4 != 0)
+    {
+      sx4 = sx4 + parseFloat(x4);
+    }
+
+    var x5 = eval("x5"+i);
+    if(x5 != 0)
+    {
+      sx5 = sx5 + parseFloat(x5);  //alert(sx5);
+    }
+  }
+    var tsx = parseFloat(sx1) + parseFloat(sx2) + parseFloat(sx3) + parseFloat(sx4) + parseFloat(sx5);
+    $("#sx1").val(sx1);
+    $("#sx2").val(sx2);
+    $("#sx3").val(sx3);
+    $("#sx4").val(sx4);
+    $("#sx5").val(sx5);
+    $("#tsx").val(tsx);
+
+
+  for (var i=1;i<=8;i++)                      // Calculate x value for squares
+  {
+    var x1 = eval("x1"+i);
+    if(x1 != 0)
+    {
+      var asx1 = $("#sx1"+i);
+      asx1.val(Math.pow(x1,2));
+    }
+
+    var x2 = eval("x2"+i);
+    if(x2 != 0)
+    {
+      var asx2 = $("#sx2"+i);
+      asx2.val(Math.pow(x2,2));
+    }
+
+    var x3 = eval("x3"+i);
+    if(x3 != 0)
+    {
+      var asx3 = $("#sx3"+i);
+      asx3.val(Math.pow(x3,2));
+    }
+
+    var x4 = eval("x4"+i);
+    if(x4 != 0)
+    {
+      var asx4 = $("#sx4"+i);
+      asx4.val(Math.pow(x4,2));
+    }
+
+    var x5 = eval("x5"+i);
+    if(x5 != 0)
+    {
+      var asx5 = $("#sx5"+i);
+      asx5.val(Math.pow(x5,2));
+    }
+  }
+
+
+  var ssx1 = 0;                                  // Sumation of all square of x values in each group
+  var ssx2 = 0;
+  var ssx3 = 0;
+  var ssx4 = 0;
+  var ssx5 = 0;
+
+  for (var i=1;i<=8;i++)
+  {
+    var sx1 = $("#sx1"+i).val();
+    if(sx1 != 0)
+    {
+      ssx1 = ssx1 + parseFloat(sx1);
+    }
+
+    var sx2 = $("#sx2"+i+"").val();
+    if(sx2 != 0)
+    {
+      ssx2 = ssx2 + parseFloat(sx2);
+    }
+
+    var sx3 = $("#sx3"+i+"").val();
+    if(sx3 != 0)
+    {
+      ssx3 = ssx3 + parseFloat(sx3);
+    }
+
+    var sx4 = $("#sx4"+i+"").val();
+    if(sx4 != 0)
+    {
+      ssx4 = ssx4 + parseFloat(sx4);
+    }
+
+    var sx5 = $("#sx5"+i+"").val();
+    if(sx5 != 0)
+    {
+      ssx5 = ssx5 + parseFloat(sx5);
+    }
+
+  }
+    var tssx = parseFloat(ssx1) + parseFloat(ssx2) + parseFloat(ssx3) + parseFloat(ssx4) + parseFloat(ssx5);
+    $("#ssx1").val(ssx1);
+    $("#ssx2").val(ssx2);
+    $("#ssx3").val(ssx3);
+    $("#ssx4").val(ssx4);
+    $("#ssx5").val(ssx5);
+    $("#tssx").val(tssx);
+
+
+  for (var i=1;i<=5;i++)                           // Calculating Mean Value
+  {
+    var sx = $("#sx"+i+"").val();
+    var n = $("#n"+i+"").val();
+    if(n!=0)
+     {
+       $("#m"+i).val( sx / n);
+     }
+  }
+
+  var tm = 0;                                     // Calculating total mean
+  var count = 0;
+  for(var i=1;i<=5;i++)
+  {
+   var m = $("#m"+i+"").val();
+   if (m!=0)
+   {
+     tm = tm + parseFloat(m);
+     count = count + 1;
+   }
+  }
+   $("#tm").val((tm / count).toFixed(2));
+
+
+  var m1 = $("#m1").val();                 // Calculating Variance
+  var m2 = $("#m2").val();
+  var m3 = $("#m3").val();
+  var m4 = $("#m4").val();
+  var m5 = $("#m5").val();
+  var sv1,sv2,sv3,sv4,sv5;
+  var ssv1 = 0;
+  var ssv2 = 0;
+  var ssv3 = 0;
+  var ssv4 = 0;
+  var ssv5 = 0;
+
+  for(var i=1;i<=8;i++)
+  {
+    var x1 = eval("x1"+i);
+    if (x1 != 0)
+     {
+       sv1 = x1 - m1;
+       ssv1 = ssv1 + parseFloat(Math.pow(sv1,2));
+     }
+
+    var x2 = eval("x2"+i);
+    if (x2 != 0)
+     {
+       sv2 = x2 - m2;
+       ssv2 = ssv2 + parseFloat(Math.pow(sv2,2));
+     }
+
+    var x3 = eval("x3"+i);
+    if (x3 != 0)
+     {
+       sv3 = x3 - m3;
+       ssv3 = ssv3 + parseFloat(Math.pow(sv3,2));
+     }
+
+    var x4 = eval("x4"+i);
+    if (x4 != 0)
+     {
+       sv4 = x4 - m4;
+       ssv4 = ssv4 + parseFloat(Math.pow(sv4,2));
+     }
+
+    var x5 = eval("x5"+i);
+    if (x5 != 0)
+     {
+       sv5 = x5 - m5;
+       ssv5 = ssv5 + parseFloat(Math.pow(sv5,2));
+     }
+  }
+  $("#v1").val((ssv1/(n1-1)).toFixed(2));
+  $("#v2").val((ssv2/(n2-1)).toFixed(2));
+  $("#v3").val((ssv3/(n3-1)).toFixed(2));
+  $("#v4").val((ssv4/(n4-1)).toFixed(2));
+  $("#v5").val((ssv5/(n5-1)).toFixed(2));
+
+  for (var i=1;i<=5;i++)                           // Calculating Standard Deviation
+  {
+    var sv = $("#v"+i+"").val();
+    if(sv!=0)
+    {
+      var sd = $("#sd"+i);
+      sd.val( Math.sqrt(sv).toFixed(3));
+    }
+  }
+
+  for (var i=1;i<=5;i++)                           // Calculating Standard Error
+  {
+    var sd = $("#sd"+i+"").val();
+    var n = $("#n"+i+"").val();
+    if(n!=0)
+    {
+      var se = $("#se"+i);
+      se.val((sd/Math.sqrt(n)).toFixed(3));
+    }
+  }
+
+  var tm = $("#tm").val();               // Between Group Mean square value
+  var bsq = 0;
+  for (var i=1;i<=5;i++)
+  {
+    var m = $("#m"+i+"").val();
+    var n = $("#n"+i+"").val();
+    if(n!=0)
+    {
+      bsq = bsq + parseFloat(n * Math.pow((m - tm),2));
+    }
+  }
+  $("#bss").val(bsq);
+  $("#bdf").val(count - 1);
+  $("#bms").val((bsq / (count-1)).toFixed(4));
+
+  var wsq = parseFloat(ssv1) + parseFloat(ssv2) + parseFloat(ssv3) + parseFloat(ssv4) + parseFloat(ssv5);             // Within Group Mean square value
+  var wdf = 0;
+  for (var i=1;i<=5;i++)
+  {
+    var n = $("#n"+i+"").val();
+    if(n!=0)
+    {
+      wdf = wdf + parseFloat(n-1);
+    }
+  }
+  $("#wss").val(wsq);
+  $("#wdf").val(wdf);
+  $("#wms").val((wsq / wdf).toFixed(4));
+  $("#fra").val((($("#bms").val()) / ($("#wms").val())).toFixed(4));
+  $("#tss").val(parseFloat(bsq) + parseFloat(wsq));
+  $("#tdf").val(parseFloat(count - 1) + parseFloat(wdf));
+
+}
+
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+                    <script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+
+
+                </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+function input_trace()
+{
+
+var str,i,sum=0,cubicsum=0,sd,dn,skew,mean;
+str=$("#m").val();
+str=str.split(",");
+mean=means(str);
+for(i=0;i<str.length;i++)
+{
+   a=parseFloat(str[i])-mean;//(value-mean)
+   sum=sum+Math.pow(a,2);//(value-mean)^2
+   cubicsum=cubicsum+cube(a);//finding the cubic sum of (value-mean)
+}
+sd=Math.sqrt(sum/(str.length-1));//computing standard deviation
+dn=(str.length-1)*cube(sd);//computing (no of values-1)*sd?^3
+skew=cubicsum/dn;//computing the skew
+$("#sv").val(Math.round(skew*100)/100);
+}
+function means(strarray)
+{
+   var sum=0,meanvalue;
+   for(var i=0;i<strarray.length;i++)
+     {
+  sum+=parseFloat(strarray[i]);
+     }
+   meanvalue=sum/strarray.length;
+   return meanvalue;
+}
+function cube(num)
+{
+return num*num*num;
+}
+
+function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 &&(charCode < 48 || charCode > 57)&&(charCode!=44)&&(charCode!=46))
+            return false;
+
+         return true;
+      }
+
+function clear_values()
+{
+$("#m").val("");
+$("#sv").val("");
+}
+
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+
+</body>
+</html>

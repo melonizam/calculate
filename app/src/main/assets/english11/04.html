@@ -1,0 +1,199 @@
+<html>
+
+<body>
+
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Standard Error Calculator</h3>
+                    <p></p>
+                    <hr>
+
+                    <form action="" id="stat_one" method="post" class="form-horizontal">
+
+                        <div id="dispCalcConts">
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div class="content clearfix" id="alarmContentDisplay">
+
+                                        <!-- content_left begins -->
+                                        <div class="content_left clearfix">
+
+
+                                            <div style="padding-top:5px"></div>
+                                            <div class="clear"> </div>
+                                            <!-- ec_calculator begins -->
+                                            <div class="ec_calculator_gen clearfix">
+                                                <div class='clear'></div>
+                                                <form name=first>
+
+                                                    <div id="overlayLoader">
+                                                        <div class="loader"> </div>
+                                                    </div>
+
+                                                    <div id="dispCalcConts">
+                                                        <div class='group clearfix'>
+                                                            <div class="formrow">
+                                                                <div class="row">
+                                                                    <div class="col-md-4"><label>Enter the Range of Values (Seperated by comma) </label></div>
+                                                                    <div class="col-md-8"><input type="text" name="k1" id=rvalue class="form-control" onkeyup='checnum(this);trimExtraComma();'></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="formrow">
+                                                            <div class="row">
+                                                                <div class="col-md-4"></div>
+                                                                <div class="col-md-4"> <button type="button"  onclick=error()  class="btn">Calculate</button></div>
+                                                                <div class="col-md-4"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='result'>
+                                                            <div class='group clearfix'>
+                                                                <div class="col-md-4"><label>Answer :</label></div>
+                                                                <div class="col-md-8"> <input type="text" class="form-control"  id=evalue style="font-weight: bold;" readonly></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>  </form>
+                                            </div>
+                                            <!-- ec_calculator ends -->
+                                            <div class="clear"> </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        var easyinputs = document.getElementsByTagName("INPUT");
+        for (var ies = 0; ies < easyinputs.length; ies++)
+        {
+          if (easyinputs[ies].type === 'button')
+          {
+            easyinputs[ies].style.visibility='hidden';
+            if ((easyinputs[ies].offsetTop-10)<0)
+            {
+              document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+            }
+            else
+            {
+              document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+            }
+          }
+          else
+          {
+            document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+          }
+          if (easyinputs[ies].type === 'reset')
+          {
+            easyinputs[ies].style.visibility='hidden';
+          }
+        }
+      </script>
+
+</div>
+
+
+<!-- content_right ends -->
+<div class="clear"> </div>
+
+<div class="clear"> </div></div>
+<!-- content ends -->
+
+<script type="text/javascript">
+      var chf_rss=true;
+      function getPathFromUrl(url){return url.split("?")[0];}
+      var curUrl = window.location.pathname;
+      var basName = curUrl.replace(/^.*[\/\\]/g, '');
+      var curencyIndx = false;
+    </script>
+<script src="https://www.easycalculation.com/js/jquery.min.js?v0.1"></script>
+<script src='https://www.easycalculation.com/common.js?v4.4'></script>
+<script src='https://www.easycalculation.com/js/jquery.sticky.js'></script>
+<!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+<script type='text/javascript'>
+
+      function checnum(as)
+      {
+        var a = as.value;
+        as.value = a.replace(/[^\d.,-]/g, '');
+      }
+      function trimExtraComma()
+      {
+        var utext = $('#rvalue').val().trim();
+        var firstChar = utext.substring(0, utext.length);
+        if(firstChar == ',')
+        {
+          utext = utext.substring(1);
+        }
+        utext = trimContinuousSymbols(utext.replace(/,+(?=,)/g,''),'.');
+        utext = utext.replace('.,',',');
+
+        $('#rvalue').val(utext);
+      }
+
+      function error()
+      {
+        var sum=0;
+        var t=$('#rvalue').val();
+
+        var rarray=t.split(',');
+        var k=rarray.length;
+        for(i=0;i<k;i++)
+        {
+          sum=sum+parseInt(rarray[i]);
+        }
+        var mean=sum/k;
+        var sqsum = 0;
+        for(i=0;i<k;i++)
+        {
+          sqsum=sqsum+(Math.pow((parseInt(rarray[i])-mean),2));
+        }
+        var sd=Math.sqrt(sqsum/(k-1));
+        var sd1=sd/Math.sqrt(k);
+        $('#evalue').val(sd1);
+      }
+    </script>
+
+<script type="text/javascript">
+      function alert(val)
+      {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+      }
+      $(document).ready(function() {
+        closeModal();
+      });
+    </script>
+
+<script type="text/javascript">
+      var chf_sess = "";
+      var chf_sess_mail = "";
+      var chf_sess_mobile = "";
+    </script>
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+
+</body>
+</html>

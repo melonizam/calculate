@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/cb63f599dc5b6640f0431225154ba9d0f77fdd27/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c2847b71dc866f96c1a3e270d47c148030770682/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/62c60f07af5bc6af5904d2bed99f2421c05c2385/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b7866db4e9b75e98e3627fe762733f715015209e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_863bb54701ab7350195f5f7af1d02aa870418b45/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/6797e1cb641e292210410b7704d4ea993e1e3faa/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4ddcce0589ad9c5f68540380a7f41c6f18a34bda/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d484b655f024fd65f1a32e593fe67c47a13efc80/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/9f29ea933178a86192583f5802465f071c77e7c2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_852b7afeb0a0da30927f698ec5bdc8e262c21f78/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/b21a49919f57489e6aeb8591b612c7c43b499e09/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1c53c12c5740a727a510b088f173f32c59c63c8e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/5acd7c678655c4e88ba1bc07d8bec20333949641/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_688b8debc49869a3dfb696ba5487372f093c579c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/56c3b3b25424e018cf2a23fee5f7da48469b7635/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a43593f1d5cbcf26a7c6195446ad34dc12322ca0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_777e69ee55aa8fe139098019f70190c6810124e6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/81a879b79875738434dd5bdc8d4895cf618ef4e5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d3075b8c21dddf4a9c61a0c04410b8503ecd63de/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/17b7cb214e7b608d2ab4a066079eb324971a8398/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b2002ccc6d533019af0a1a37d2bc9c90c1e96084/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/0eac20a1cb41199e94a83d93087968e4330c92e0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e1245454290e8f591df0793096d3f8a3949aaf31/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/a2d7fd5d512f4aae16c8548afb0d50eea86acbbc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="96e33a7aaee00ab64270e2a9887b8f9ef32c8b73">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bd501957ed03a35d0e569edc33b074fb4736e549/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/626e038a191b2911870bfe5920472e94a4a27148/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bed96f88278b55bc04bcc1d4615974ea76c4356a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/caab6d46b6e6729bbcdbb64409f30550acd85aea/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c71327786878cf1eef50167441f98cc5002f63c0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/.android/build-cache/79b4989a93976a9d38cbce1b43931c7483cabfef/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c2f5e9f38fcd3d99bfa64b28bda3420fe1202fda/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f71731eec52f2da19370cd717fa90511e35bdc6c">
+        <dex dex="/home/tasol/Downloads/NavViewRecyclerView-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_93e15e351fe3673b9394b0acbc5cb3606d9bb028/classes.dex" />
+    </item>
+
+</items>

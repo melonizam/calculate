@@ -1,0 +1,426 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Calculator</title>
+    <!-- Fav Icon -->
+
+    <link rel="shortcut icon" href="https://epicalci.com/assets/images/favicon.png">
+    <link href="https://epicalci.com/assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <link href="https://epicalci.com/assets/css/embedded.css" rel="stylesheet">
+
+    <link href="https://epicalci.com/assets/css/owl.carousel.css" rel="stylesheet">
+
+    <link href="https://epicalci.com/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="https://epicalci.com/assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <script src="https://epicalci.com/assets/js/jquery.js"></script>
+    <!-- <script src="https://epicalci.com/assets/js/jquery.min65e9.js"></script>
+    <script src="https://epicalci.com/assets/js/jquery.sticky.js"></script>  --><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://epicalci.com/dist/math.js"></script>
+    <script src="https://epicalci.com/assets/js/bootstrap.min.js"></script>
+
+
+
+
+    <style type="text/css">
+  #cards
+  {
+    min-height: 100px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center; 
+  }
+  #cards a
+  {
+    display: block;
+    color: #00a2ff;
+    text-decoration: none;
+  }
+  #cards a:hover
+  {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  #cards:hover
+  {
+    background-color: #00a2ff;
+  }
+  .answer
+  {
+    border: none;
+    background-color:white; 
+    box-shadow: 0 0 2px 2px grey;
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+  padding-left: 10px;
+  }
+</style>
+
+    <style type="text/css">
+  #sidebar-cat
+  {
+      min-height: 400px;
+      max-height: 400px;
+      overflow-y: scroll;
+  }
+ #logo
+  {
+
+    height: 65px;
+    max-width: 350px;
+  }
+</style>
+
+    <style type="text/css">
+.glyphicon-remove
+{
+  color:red;
+}
+.glyphicon-ok
+{
+  color:green;
+}
+</style>
+
+</head>
+<body>
+
+       <div class="col-md-9 col-sm-12">
+            <ul class="searchList">
+                <li>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h3>Two by two table calculator</h3>
+                            <p style="word-break: break-all;"></p>
+                            <hr>
+
+                            <div class="ec_calculator_gen clearfix">
+                                <!-- <h2>Odds Ratio Confidence Interval Calculation For 2x2 Contingency Table</h2> -->
+                                <div class="clearfix"></div>  <div class='clear'></div>
+                                <form name=first>
+                                    <div id="overlayLoader">
+                                        <div class="loader"> </div>
+                                    </div>
+                                    <div id="dispCalcConts">
+                                        <div class='group clearfix'>
+                                            <div class='group_con'>
+                                            </div>
+
+                                            <div class='group_con'>
+
+                                                <div class="col-md-6" align="center"><span><label>Test Positive</label></span></div>
+                                            </div>
+                                            <div class='group_con'>
+                                                <div class="col-md-6"><span></span><span><label>Test Negative</label></span></div>
+                                            </div>
+                                            <div class='group_con'>
+                                            </div></div>
+
+
+                                        <div class='group clearfix'>
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><label>Presence of disease</label></div>
+                                            </div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><span>a:</span><span><input type=text id=a onkeyup=checnum(this) tabindex=1 class='easypositive form-control'></span></div></div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><span>b:</span><span><input type=text id=b onkeyup=checnum(this) tabindex=2 class='easypositive form-control'></span></div></div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><input type=text id=r1 onkeyup=checnum(this) readonly style='background-color:LightBlue' class='easypositive form-control'></div>
+                                            </div></div>
+                                        <br>
+
+                                        <div class='group clearfix'>
+                                            <div class='group_con'>
+                                                <div class="col-md-3">
+                                                    <label>Absence of disease</label></div>
+                                            </div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><span>c:</span><span><input type=text id=c onkeyup=checnum(this) tabindex=3 class='easypositive form-control'></span></div></div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><span>d:</span><span><input type=text id=d onkeyup=checnum(this) tabindex=4 class='easypositive form-control'></span></div></div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><input type=text id=r2 onkeyup=checnum(this) readonly style='background-color:LightBlue' class='easypositive form-control'></div></div></div>
+                                        <br>
+                                        <div class='group clearfix'>
+                                            <div class='group_con'>
+                                                <div class="col-md-3">
+                                                    <label>Total</label></div>
+                                            </div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><span></span><span><input type=text id=c1 onkeyup=checnum(this) readonly style='background-color:LightBlue' class='easypositive form-control'></span></div></div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><span></span><span><input type=text id=c2 onkeyup=checnum(this) readonly style='background-color:LightBlue' class='easypositive form-control' ></span></div></div>
+
+                                            <div class='group_con'>
+                                                <div class="col-md-3"><input type=text id=r3 onkeyup=checnum(this) readonly style='background-color:LightBlue' class='easypositive form-control'></div></div></div>
+
+                                        <div class='group clearfix' align=center>
+                                            <div class="formrow">
+                                                <div class="row">
+                                                    <div class="col-md-4"></div>
+                                                    <div class="col-md-4"><input type=button value='Calculate' onclick=tqe_perc() class='easypositive btn'></div>
+                                                </div></div></div>
+
+                                        <div class='result'>
+                                            <div class='group clearfix'>
+
+                                                <div class="col-md-4"><label>Odds ratio</label></div>
+                                                <div class="col-md-8"><input type=text readonly id=r class='easypositive form-control'>
+                                                </div></div></div></div>
+
+                                    <div class='group clearfix'>
+                                        <div class="formrow">
+                                            <div class="row">
+
+                                                <div class="col-md-4"><label>95% confidence interval</label></div>
+                                                <div class="col-md-8"><input type=text readonly id=rr class='easypositive form-control'>
+                                                </div></div></div></div>
+                            </div></div>  </form>
+                    </div>
+                    <div class="clear"> </div>
+                    <script type="text/javascript">
+  var easyinputs = document.getElementsByTagName("INPUT");
+  for (var ies = 0; ies < easyinputs.length; ies++)
+  {
+      if (easyinputs[ies].type === 'button')
+      { 
+    easyinputs[ies].style.visibility='hidden';
+    if ((easyinputs[ies].offsetTop-10)<0)
+    {
+      document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+    }
+    else
+    {
+      document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+    }
+      }
+      else
+      {
+    document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+      }
+      if (easyinputs[ies].type === 'reset')
+      { 
+    easyinputs[ies].style.visibility='hidden';
+      }
+  }
+</script>
+                    <script type="text/javascript">
+  var chf_rss=true;
+  function getPathFromUrl(url){return url.split("?")[0];}
+  var curUrl = window.location.pathname; 
+  var basName = curUrl.replace(/^.*[\/\\]/g, '');
+  var curencyIndx = false;
+</script>
+                    <script src="https://epicalci.com/assets/js/jquery.min65e9.js?v0.1"></script>
+                    <script src='https://epicalci.com/assets/js/commond8be.js?v4.4'></script>
+                    <script src='https://epicalci.com/assets/js/jquery.sticky.js'></script>
+                    <script type="text/javascript">
+function checnum(as)
+{
+    var a = as.value;
+  
+    for(var x=0; x<a.length; x++)
+    {
+       var ff = a[x];
+       if(isNaN(a) || ff==" ")
+       {
+      a = a.substring(0,(a.length-1));
+      as.value = a;
+       }  
+       }  
+}
+ 
+var a=0,b=0,c=0,d=0,r=0,r1=0,r2=0,r3=0,c1=0,c2=0;
+function tqe_perc()
+{
+  a= $("#a").val();
+  b= $("#b").val();
+  c= $("#c").val();
+  d= $("#d").val();
+   
+  if(a=="")
+  {
+    alert("Enter value for a");
+    $("#a").focus();
+  }
+  else if(b=="")
+  {
+                alert("Enter value for b");
+    $("#b").focus();
+ 
+        } 
+        else if(c=="")
+             {
+                alert("Enter value for c");
+    $("#c").focus();              
+             }
+        else if(d=="")
+             {
+                alert("Enter value for d");
+    $("#d").focus();              
+             }
+         else
+           {
+           
+         a=parseFloat(a);
+         b=parseFloat(b);
+         c=parseFloat(c);
+         d=parseFloat(d);
+         
+         c1=a+c;
+         c2=b+d;
+         r3=c1+c2;
+         r1=a+b;
+         r2=c+d;
+         $("#c1").val(c1);
+         $("#c2").val(c2);
+         $("#r1").val(r1);
+         $("#r2").val(r2);
+         $("#r3").val(r3);
+ 
+         
+         r=(a/c)/(b/d);        
+         $("#r").val(round(r));
+         
+         
+    var cinit=Math.sqrt((1/a)+(1/b)+(1/c)+(1/d))
+var y=Math.log(r)-(1.96*cinit)
+var z=Math.log(r)+(1.96*cinit)
+y=Math.exp(y)
+z=Math.exp(z)
+y=Math.round(y*10000)/10000
+z=Math.round(z*10000)/10000
+var str="from " +y+ " to "+z;
+$("#rr").val(str);
+
+
+           }
+}
+function round(a)
+{
+return Math.round(a*10000)/10000;
+}
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+                    <script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+
+        </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript">
+function input_trace()
+{
+
+var str,i,sum=0,cubicsum=0,sd,dn,skew,mean;
+str=$("#m").val();
+str=str.split(",");
+mean=means(str);
+for(i=0;i<str.length;i++)
+{
+   a=parseFloat(str[i])-mean;//(value-mean)
+   sum=sum+Math.pow(a,2);//(value-mean)^2
+   cubicsum=cubicsum+cube(a);//finding the cubic sum of (value-mean)
+}
+sd=Math.sqrt(sum/(str.length-1));//computing standard deviation
+dn=(str.length-1)*cube(sd);//computing (no of values-1)*sd?^3
+skew=cubicsum/dn;//computing the skew
+$("#sv").val(Math.round(skew*100)/100);
+}
+function means(strarray)
+{
+   var sum=0,meanvalue;
+   for(var i=0;i<strarray.length;i++)
+     {
+  sum+=parseFloat(strarray[i]);
+     }
+   meanvalue=sum/strarray.length;
+   return meanvalue;      
+}
+function cube(num)
+{
+return num*num*num;
+}
+
+function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 &&(charCode < 48 || charCode > 57)&&(charCode!=44)&&(charCode!=46))
+            return false;
+
+         return true;
+      }
+      
+function clear_values()
+{
+$("#m").val("");
+$("#sv").val("");
+}
+
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+
+<style type="text/css">
+  .lii 
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+
+</body>
+
+</html>

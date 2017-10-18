@@ -1,0 +1,578 @@
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Calculator</title>
+    <!-- Fav Icon -->
+
+    <link rel="shortcut icon" href="https://epicalci.com/assets/images/favicon.png">
+    <link href="https://epicalci.com/assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <link href="https://epicalci.com/assets/css/embedded.css" rel="stylesheet">
+
+    <link href="https://epicalci.com/assets/css/owl.carousel.css" rel="stylesheet">
+
+    <link href="https://epicalci.com/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="https://epicalci.com/assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <script src="https://epicalci.com/assets/js/jquery.js"></script>
+    <!-- <script src="https://epicalci.com/assets/js/jquery.min65e9.js"></script>
+    <script src="https://epicalci.com/assets/js/jquery.sticky.js"></script>  --><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://epicalci.com/dist/math.js"></script>
+    <script src="https://epicalci.com/assets/js/bootstrap.min.js"></script>
+
+
+
+
+    <style type="text/css">
+  #cards
+  {
+    min-height: 100px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center; 
+  }
+  #cards a
+  {
+    display: block;
+    color: #00a2ff;
+    text-decoration: none;
+  }
+  #cards a:hover
+  {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  #cards:hover
+  {
+    background-color: #00a2ff;
+  }
+  .answer
+  {
+    border: none;
+    background-color:white; 
+    box-shadow: 0 0 2px 2px grey;
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+  padding-left: 10px;
+  }
+</style>
+
+    <style type="text/css">
+  #sidebar-cat
+  {
+      min-height: 400px;
+      max-height: 400px;
+      overflow-y: scroll;
+  }
+ #logo
+  {
+
+    height: 65px;
+    max-width: 350px;
+  }
+</style>
+
+    <style type="text/css">
+.glyphicon-remove
+{
+  color:red;
+}
+.glyphicon-ok
+{
+  color:green;
+}
+</style>
+
+</head>
+<body>
+<!-- Header start -->
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-sm-3 col-xs-12 ft-logo"> <a href="https://epicalci.com/Welcome" class="logo"><img id="logo" src="https://epicalci.com/assets/images/Epi Calci Logo Final with title.png" alt=""></a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-md-10 col-sm-12 col-xs-12">
+                <!-- Nav start -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="navbar-collapse collapse" id="nav-main">
+                        <ul class="nav navbar-nav">
+                            <li><a href="https://epicalci.com/Welcome/index">Home</a></li>
+                            <li><a href="https://epicalci.com/Welcome/contact">Contact Us</a></li>
+                            <li><a href="https://epicalci.com/Welcome/about">About us</a></li>
+
+                            <li class="postjob"><a href="https://epicalci.com/Welcome/logout">Logout</a></li>
+
+
+                            <li class="jobseeker"><a href="https://epicalci.com/Welcome/register">Signup</a></li>
+                        </ul>
+                        <!-- Nav collapes end -->
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Nav end -->
+            </div>
+        </div>
+        <!-- row end -->
+    </div>
+    <!-- Header container end -->
+</div>
+<!-- Header end -->
+
+            <!-- ec_calculator begins -->
+            <div class="col-md-9 col-sm-12">
+                <ul class="searchList">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+
+                                <h3>Standardized Mortality Ratio</h3>
+                                <p style='margin:0 0.1em; font-size:0.95em;'></p>
+                                <hr>
+                                <form action="" id="stat_one" method="post">
+
+                                    <div id="overlayLoader">
+                                        <div class="loader"> </div>
+                                    </div>
+
+                                    <TABLE width=442>
+                                        <TBODY>
+                                        <TR >
+                                            <TH width=231>
+                                                <P>Observed number
+                                                    of events:</P></TH>
+                                            <TD width=85>
+                                                <P><INPUT class="form-control" onfocus=Obs.select() size=10 maxlength="16"
+                                                          value=" 41" name=Obs></P></TD></CENTER>
+                                            <TD width=109>
+                                                <P></P></TD></TR>
+                                        <CENTER>
+                                            <TR >
+                                                <TH width=231>
+                                                    <DIV>
+                                                        <P>Expected number
+                                                            of events: </P></DIV></TH>
+                                                <TD width=85>
+                                                    <P><INPUT class="form-control" onfocus=Exp.select() size=10 maxlength="16"
+                                                              value=" 23.3" name=Exp></P></TD></CENTER>
+
+                                        <TR >
+                                            <TH width=231>
+                                                <font face="Arial">
+                                                    <b>
+                                                        Confidence Level</b>:&nbsp;
+
+                                            </TH>
+
+                                            <TD width=85>
+                                                <font face="Arial">
+                                                    <!-- <SELECT NAME="Percentile" onChange=CalcStats(this.form)-->
+
+                                                    <SELECT NAME="ConfLevel" class="form-control">
+                                                        <OPTION VALUE="15.137">99.99%
+                                                        <OPTION VALUE="13.831">99.98%
+                                                        <OPTION VALUE="12.116">99.95%
+                                                        <OPTION VALUE="10.828">99.9%
+                                                        <OPTION VALUE="9.550">99.8%
+                                                        <OPTION VALUE="7.879">99.5%
+                                                        <OPTION VALUE="6.635">99%
+                                                        <OPTION VALUE="5.412">98%
+                                                        <OPTION VALUE="3.84" SELECTED>95%
+                                                        <OPTION VALUE="2.706">90%
+                                                        <OPTION VALUE="2.072">85%
+                                                        <OPTION VALUE="1.642">80%
+                                                        <OPTION VALUE="1.html">75%
+                                                        <OPTION VALUE="1.074">70%
+                                                        <OPTION VALUE="0.873">65%
+                                                        <OPTION VALUE="0.708">60%
+                                                        <OPTION VALUE="0.571">55%
+                                                        <OPTION VALUE="0.455">50%
+                                                        <OPTION VALUE="0.357">45%
+                                                        <OPTION VALUE="0.275">40%
+                                                        <OPTION VALUE="0.206">35%
+                                                        <OPTION VALUE="0.148">30%
+                                                        <OPTION VALUE="0.102">25%
+                                                        <OPTION VALUE="0.064">20% </SELECT>
+                                                </font>
+                                            </TD>
+                                            <TD width=109>
+                                                <p align="center"><INPUT onclick=CalcBin(form) class="btn" type=button alt=computing value=Compute></TD></TR></TBODY></TABLE>
+
+                                    <P>
+                                        &nbsp;
+                                        <TABLE width=497 border=1>
+                                            <TBODY>
+                                            <TR>
+                                                <TD>
+                                    <P>&nbsp;</P></TD>
+                                    <TD>
+                                        <DIV><B>Chi-square value</B> </DIV></TD>
+                                    <TD>
+                                        <DIV><B>d.f.</B> </DIV></TD>
+                                    <TD>
+                                        <DIV><B>p-value</B> </DIV></TD></TR></CENTER>
+                                    <TR>
+                                        <TD>
+                                            <P><B>Chi-square</B></P></TD>
+                                        <CENTER>
+                                            <TD>
+                                                <p align="center"><INPUT class="form-control" placeholder="1" onfocus=Obs.focus() size=22
+                                                                         name=cs readonly></p>
+                                            </TD>
+                                            <TD>
+                                                <p align="center" ><INPUT  class="form-control" onfocus=Obs.focus() size=4 value=1
+                                                                           name=df readonly></p>
+                                            </TD>
+                                            <TD>
+                                                <p align="center">
+                                                    <INPUT class="form-control" placeholder="1" onfocus=Obs.focus() size=10
+                                                           name=cs_p readonly></p>
+                                            </TD></TR></TBODY></TABLE>
+
+
+
+                                    <P>
+                                        &nbsp;
+                                        &nbsp;
+
+
+
+                                    <P><B>Point Estimate and Confidence Limits&nbsp;&nbsp;</B><P></CENTER>
+                                    <DIV>
+                                        <CENTER>
+                                            <TABLE>
+                                                <TBODY>
+                                                <TR>
+                                                    <TD>
+                                                        <DIV>
+                                                            <h4>Answer :</h4>
+                                                            <br>
+                                    </P></DIV></TD>
+                            <br>
+                            <TH>
+                                <DIV>Lower Confidence Level </DIV></TH>
+                            <TH>
+                                <DIV>SMR </DIV></TH>
+                            <TH>
+                                <DIV>Upper Confidence Level </DIV></TH>
+                            <TH>
+                                &nbsp;</TH></TR>
+                            <TR>
+                                <TH>
+                                    <font face="Arial">Mid-P exact CI: </TH>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="QL" size="23" readonly></TD>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="Ratio" size="23" readonly></TD>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="QU" size="23" readonly></TD>
+                                <TD>
+                                    <sup>1</sup></TD></TR>
+                            <TR>
+                                <TH>
+                                    <font face="Arial">Fisher's exact CI:</TH>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="QL3" size="23" readonly></TD>
+                                <TD>
+                                    &nbsp;</TD>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="QU3" size="23" readonly></TD>
+                                <TD>
+                                    <sup>2</sup></TD></TR>
+                            <TR>
+                                <TH>
+                                    <font face="Arial">Ury &amp; Wiggins CI:</TH>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="QL2" size="23" readonly></TD>
+                                <TD>
+                                    &nbsp;</TD>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="QU2" size="23" readonly></TD>
+                                <TD>
+                                    <sup>3</sup></TD>
+                            </TR>
+                            <TR>
+                                <TH>
+                                    Vandenbroucke&nbsp;CI:</TH>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="QL1" size="23" readonly></TD>
+                                <TD>
+                                    &nbsp;</TD>
+                                <TD>
+                                    <input onfocus=Obs.focus() class="form-control" type="text" name="QU1" size="23" readonly></TD>
+                                <TD>
+                                    <sup>4</sup></TD>
+                            </TR>
+                            <TR>
+                                <TH>
+                                    <P>&nbsp; Byar&nbsp;CI:</P></TH>
+                                <TD>
+                                    <P><INPUT onfocus=Obs.focus() class="form-control" size=23 name=DL readonly></P></TD>
+                                <TD>
+                                    <P>&nbsp;</P></TD>
+                                <TD>
+                                    <P><INPUT onfocus=Obs.focus() class="form-control" size=23 name=DU readonly></P></TD>
+                                <TD>
+                                    <sup>5</sup></TD></TR>
+                            <TR>
+                                <TH>
+                                    <P>&nbsp;Boice-Monson CI:</P></TH>
+                                <TD>
+                                    <P><INPUT onfocus=Obs.focus() class="form-control" size=23 name=PL readonly></P></TD>
+                                <TD>
+                                    <P></P></TD>
+                                <TD>
+                                    <P><INPUT onfocus=Obs.focus() class="form-control" size=23 name=PU readonly></P></TD>
+                                <TD>
+                                    <sup>6</sup></TD></TR>
+                            </TBODY></TABLE></DIV>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ec_calculator ends -->
+<div class="clear"> </div>
+
+
+<div style="clear: both;"></div>
+<!-- Code to placed for Second 300x250 ad -->
+<!-- boxad ends -->
+<div class="clear"> </div>
+</div>
+</div>
+</div>
+<SCRIPT language=LiveScript>
+<!-- hide this script tag's contents from old browsers
+//Original code by John Pezzullo - modified by Kevin Sullivan and Minn Minn Soe;
+var vTL=2.5;  var vTU=2.5;  var vCL=95;var Pi=Math.PI; var zL; var zU;
+// no need to define following global variables as there is no value given for each one;
+//var vx;var vN;var vP; //var vPL; //var vPU;var vWL; 
+var vWU;var pvalue//;
+
+
+
+function CalcBin(form) {
+    var Obs = eval(form.Obs.value);
+    var Exp = eval(form.Exp.value);
+    
+	var cscrit = form.ConfLevel[form.ConfLevel.selectedIndex].value;
+	
+	if (cscrit==15.137) name=99.99 
+    if (cscrit==13.831) name=99.98 
+    if (cscrit==12.116) name=99.95 
+    if (cscrit==10.828) name=99.9 
+    if (cscrit==9.550) name=99.8 
+    if (cscrit==7.879) name=99.5
+    if (cscrit==6.635) name=99
+    if (cscrit==5.412) name=98
+    if (cscrit==3.84) name=95
+    if (cscrit==2.706) name=90 
+    if (cscrit==2.072) name=85
+    if (cscrit==1.642) name=80 
+    if (cscrit==1.323) name=75 
+    if (cscrit==1.074) name=70
+    if (cscrit==0.873) name=65 
+    if (cscrit==0.708) name=60 
+    if (cscrit==0.571) name=55
+    if (cscrit==0.455) name=50 
+    if (cscrit==0.357) name=45 
+    if (cscrit==0.275) name=40 
+    if (cscrit==0.206) name=35 
+    if (cscrit==0.148) name=30 
+    if (cscrit==0.102) name=25 
+    if (cscrit==0.064) name=20; 
+	
+	var zL = Math.sqrt(cscrit);	var zU=zL;
+    	
+    cs=(Obs - Exp) * (Obs - Exp) / Exp;
+
+//  form.cs_p.value = Fmt(Csp(cs));
+    form.cs.value = round(cs);
+    
+
+//  to keep 6 decimal places and to prevent expression of 'NaN' by javascript;
+    if(cs>10.83) form.cs_p.value="<0.001";else form.cs_p.value = round(ChiSq(cs, 1));
+
+//	to simply calculate SMR (point estimate);
+    var Ratio = Obs/Exp;
+	form.Ratio.value = round(Ratio);
+
+
+// Mid-P exact test;
+	// Lower tail;
+	{var v=0.5; var dv=0.5; var vTL=(100-name)/2; var p=vTL/100;}
+	
+	var vZ = Obs;
+    while(dv>1e-5) {  dv=dv/2; if ( PoisP((1+vZ)*v/(1-v),vZ+1,1e10) + 0.5*PoisP((1+vZ)*v/(1-v),vZ,vZ) >p)
+    { v=v-dv } else { v=v+dv }  }
+    var QL= ((1+vZ)*v/(1-v))/Exp;
+    form.QL.value =round(QL);
+    
+    // Upper tail;
+    {var v=0.5; var dv=0.5; var vTU=(100-name)/2; var p=vTU/100;}
+	  
+    while(dv>1e-5) { dv=dv/2; if  (  PoisP((1+vZ)*v/(1-v),0,vZ-1)    +  0.5*PoisP((1+vZ)*v/(1-v),vZ,vZ) <p)
+    { v=v-dv } else { v=v+dv } }
+    var QU = ((1+vZ)*v/(1-v))/Exp; 
+    form.QU.value = round(QU);
+
+
+
+// Fisher's exact test;
+	// Lower tail;
+	{var v=0.5; var dv=0.5; var vTL=(100-name)/2; var p=vTL/100;}
+	
+	var vZ = Obs;
+    while(dv>1e-5) {  dv=dv/2; if(PoisP((1+vZ)*v/(1-v),vZ,1e10)>p) { v=v-dv } else { v=v+dv }  }
+    var QL3= ((1+vZ)*v/(1-v))/Exp;
+    form.QL3.value =round(QL3);
+    
+    // Upper tail;
+    {var v=0.5; var dv=0.5; var vTU=(100-name)/2; var p=vTU/100;}
+	  
+    while(dv>1e-5) { dv=dv/2; if(PoisP((1+vZ)*v/(1-v),0,vZ)<p) { v=v-dv } else { v=v+dv } }
+    var QU3 = ((1+vZ)*v/(1-v))/Exp; 
+    form.QU3.value = round(QU3);
+
+
+if (name==90 || name==95|| name==99){
+
+// Vandenbroucke method
+	//lower tail;
+	QL1=Math.pow((Math.sqrt(Obs) - zL*0.5),2)/Exp;
+	form.QL1.value=round(QL1);
+	//Upper tail;
+	QU1=Math.pow((Math.sqrt(Obs) + zU*0.5),2)/Exp;
+	form.QU1.value=round(QU1);
+	
+	
+// Ury and Wiggins method;
+	//for observation>50;
+	if (Obs>50)	{
+	//for 99%CI;
+	if (cscrit==6.635) {QL2= (Obs - (zL*Math.sqrt(Obs))+ 2)/Exp;
+	QU2= (Obs + (zL*Math.sqrt(Obs))+ 3)/Exp;}
+	if (cscrit==3.84) {QL2= (Obs - (zL*Math.sqrt(Obs))+ 1)/Exp;
+	QU2= (Obs + (zL*Math.sqrt(Obs))+ 2)/Exp;}
+	if (cscrit==2.706) {QL2= (Obs - (zL*Math.sqrt(Obs))+ 0.65)/Exp;
+	QU2= (Obs + (zL*Math.sqrt(Obs))+ 1.65)/Exp;}
+	}
+	// for observation <=50;
+	else {
+	if (cscrit==6.635) { QL2= (Obs - (zL*Math.sqrt(Obs))+ 2 )/Exp;
+	QU2= (Obs + (zL*Math.sqrt(Obs))+ 3 + 0.1)/Exp;}
+	if (cscrit==3.84)  {QL2= (Obs - (zL*Math.sqrt(Obs))+ 1 )/Exp;
+	QU2= (Obs + (zL*Math.sqrt(Obs))+ 2 + 0.1)/Exp;}
+	if (cscrit==2.706) {QL2= (Obs - (zL*Math.sqrt(Obs))+ 0.65 )/Exp;
+	QU2= (Obs + (zL*Math.sqrt(Obs))+ 1.65 + 0.1)/Exp;}
+	}
+	
+	form.QL2.value= round(QL2);
+	form.QU2.value= round(QU2);
+}
+	else {
+	form.QL1.value= 'NA';form.QU1.value= 'NA';form.QL2.value= 'NA';form.QU2.value= 'NA'
+}
+
+
+
+
+//Byar method approximation;
+    var vPL = Ratio * Math.pow(1 - (1/(9 * Obs)) - (zL / (3 * (Math.sqrt(Obs)))),3);
+    var vPU = ((Obs + 1)/Exp) * Math.pow(1 - (1/(9 * (Obs + 1))) + (zL / (3 * (Math.sqrt(Obs + 1)))),3);
+
+    
+    form.DL.value    = round(vPL);
+    form.DU.value    = round(vPU);
+    
+
+//Boice-Monson method approximation;
+
+    var PU = Math.exp( (Math.log(Obs/Exp)) + (zU*(1/Math.sqrt(Obs))) );
+    var PL = Math.exp( (Math.log(Obs/Exp)) - (zU*(1/Math.sqrt(Obs))) );
+    form.PL.value = round(PL);
+    form.PU.value = round(PU);
+        
+    //if SMR < 0.000001, flash it !!!------------;
+    if (Ratio < 1e-6) alert("'SMR' - Ratio of 'Observed events' by 'Expected events' shoud be => 0.000001 to get exact figures !!");   
+}
+
+
+// For rounding upto 6 decimal places;
+function round(x){
+var x = Math.round(x * 1000000) /1000000;
+if (x < 1e-6) x = "<0.000001";
+return x;
+}
+
+
+//Poisson iteration;
+function PoisP(Z,x1,x2) {
+    var q=1; var tot=0; var s=0; var k=0
+    while(k<Z || q>(tot*1e-10)) {
+        tot=tot+q
+        if(k>=x1 & k<=x2) { s=s+q }
+       if(tot>1e30){s=s/1e30; tot=tot/1e30; q=q/1e30}
+        k=k+1; q=q*Z/k
+        }
+    return s/tot
+    }
+
+
+function ChiSq(x,n) {
+    if(n==1 & x>10.83) {return 0};
+    
+    if(x>1000 | n>1000) {
+        var q=ChiSq((x-n)*(x-n)/(2*n),1)/2
+        if(x>n) {return q} {return 1-q}
+        }
+    var p=Math.exp(-0.5*x); if((n%2)==1) { p=p*Math.sqrt(2*x/Pi) }
+    var k=n; while(k>=2) { p=p*x/k; k=k-2 }
+    
+    var t=p; var a=n; while(t>0.0000000001*p) { a=a+2; t=t*x/a; p=p+t };
+    return 1-p;
+}
+
+<!-- done hiding from old browsers -->
+</SCRIPT>
+
+<style type="text/css">
+  .lii 
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+
+</body>
+
+</html>

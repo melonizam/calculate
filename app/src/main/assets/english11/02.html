@@ -1,0 +1,397 @@
+<html>
+<head>
+
+
+    <!-- <link href="https://epicalci.com/assets/css/style4b6d.css" rel="stylesheet"> -->
+    <script src="https://epicalci.com/assets/js/jquery.min65e9.js?v0.1"></script>
+    <script src='https://epicalci.com/assets/js/commond8be.js?v4.4'></script>
+    <script src='https://epicalci.com/assets/js/jquery.sticky.js'></script>
+
+</head>
+<body>
+
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Mean Median Mode Calculator</h3>
+                    <p></p>
+                    <hr>
+
+                    <form action="" id="stat_one" method="post" class="form-horizontal">
+
+                        <div id="dispCalcConts">
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div style="padding-top:10px"></div>
+                                    <div class="clear"> </div>
+
+                                    <!-- ec_calculator begins -->
+                                    <div class="ec_calculator_gen clearfix">
+                                        <h2>Calculate Average and Range</h2>
+                                        <div class="clearfix"></div>  <div class='clear'></div>
+                                        <form name=first>
+                                            <div id="overlayLoader">
+                                                <div class="loader"> </div>
+                                            </div>
+                                            <div id="dispCalcConts"><div class='group clearfix'>
+                                                <label>E.g: 13,23,12,44,55</label>
+                                                <div class="row">
+                                                    <div class="col-md-4"></div>
+                                                    <textarea id=a11 rows=2 cols=40 class="form-control" onkeyup='checnum(this)'></textarea>
+                                                </div>
+                                            </div>
+                                            </div>
+
+                                            <div class='group clearfix'>
+                                                <div class="formrow">
+                                                    <div class="row">
+                                                        <div class="col-md-4"></div>
+                                                        <div class='group clearfix' align=center>
+                                                            <div class="col-md-4"> <button type="button"  onclick=madd() class="btn">Calculate</button></div>
+                                                        </div>
+                                                    </div></div></div>
+                                            <div class='result'>
+                                                <div class='group clearfix'>
+                                                    <div class="col-md-4"><label>Answer :</label></div>
+                                                </div>
+                                                <br>
+                                                <div class='result'>
+                                                    <div class='group clearfix'>
+                                                        <div class="col-md-4"><label>Total Numbers:</label></div>
+                                                        <div class="col-md-8"><input class="form-control" id=r1 type=text readonly> </div>
+                                                    </div>
+
+                                                    <div class='group clearfix'>
+                                                        <div class="col-md-4"><label>Mean (Average):</label></div>
+                                                        <div class="col-md-8"><input class="form-control" id=r2 type=text readonly></div>
+                                                    </div>
+
+                                                    <div class='group clearfix'>
+                                                        <div class="col-md-4"><label>Median:</label></div>
+                                                        <div class="col-md-8"><input class="form-control" id=r3 type=text readonly></div>
+                                                    </div>
+
+                                                    <div class='group clearfix'>
+                                                        <div class="col-md-4"><label>Mode:</label></div>
+                                                        <div class="col-md-8"><input class="form-control" id=r4 type=text readonly></div>
+                                                    </div>
+
+
+                                                    <div class='group clearfix'>
+                                                        <div class="col-md-4"><label>Range:</label></div>
+                                                        <div class="col-md-8"><input class="form-control" id=r6 type=text readonly></div>
+                                                    </div>
+
+                                                    <div class='group clearfix'>
+                                                        <div class="col-md-4"><label>Ascending Order:</label></div>
+                                                        <div class="col-md-8"><textarea class="form-control" id=r5 cols=30 readonly> </textarea></div>
+                                                    </div>
+                                                </div></div>  </form>
+                                    </div>
+                                    <!-- ec_calculator ends -->
+                                    <div class="clear"> </div>
+
+                                </div>
+
+                            </div>
+                            <!-- content_right ends -->
+                        </div>
+                        <!-- content ends -->
+
+                        <script type="text/javascript">
+  var chf_rss=true;
+  function getPathFromUrl(url){return url.split("?")[0];}
+  var curUrl = window.location.pathname;
+  var basName = curUrl.replace(/^.*[\/\\]/g, '');
+  var curencyIndx = false;
+</script>
+
+                        <!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+                        <script type='text/javascript'>
+
+function checnum(as)
+{
+
+      var a = as.value;
+      a= a.replace(/[^\d,.]/g, '');
+      a=a.replace(/\,\,/g, ',');
+      as.value=a.replace(/\.\./g, '.');
+
+}
+
+
+function isNum(arg)
+{
+  var args = arg;
+  var fad = true;
+
+  if (args == '' || args == null || args.length == 0)
+  {
+    return false;
+  }
+
+  args = args.toString();
+
+  for (var i = 0;  i<args.length;  i++)
+  {
+    if (args.substring(i,i+1) < '0' || args.substring(i, i+1) > '9')
+    {
+      if(args.substring(i, i+1) == '.')
+      {
+        if(fad == true)
+          fad = false;
+        else
+          return false;
+      }
+      else
+      {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+function madd()
+{
+  var vva = $('#a11').val();
+  vva = vva.replace(' ','');
+  var resul;
+  var bb = true;
+  if(vva != '')
+  {
+
+    resul = vva.split(',');
+  }
+
+  for(var v=0; v<resul.length; v++)
+  {
+    var d = resul[v];
+
+    if(isNaN(d) || d == '')
+    {
+      alert('The number \''+d+'\' is not a valid one');
+      var bb = false;
+      break;
+    }
+
+
+  }
+
+  if(bb == true)
+  {
+    var tot = resul.length;
+    var mean=0;
+    $('#r1').val(tot);
+
+    for(var c=0; c<tot; c++)
+    {
+      mean = mean+parseFloat(resul[c]);
+    }
+    mean = mean/tot;
+    $('#r2').val(Math.round(mean*100000)/100000);
+
+                resul.sort(function(a, b){return a-b});
+
+    var median = 0;
+
+    if(tot%2 == 0)
+    {
+      var sdd = '('+parseFloat(resul[(tot/2)-1])+'+'+parseFloat(resul[tot/2])+')/2';
+      median = sdd+' = '+eval(sdd);
+    }
+    else
+    {
+      median = resul[(tot-1)/2];
+    }
+    $('#r3').val(median);
+                $('#r6').val(resul[resul.length-1]-resul[0]);
+    $('#r5').val(resul);
+
+    var modeval=0;
+    var maxval=0;
+    var mode,curval;
+    curval = resul[0];
+                var countMode = 0;
+
+    for(var z=0; z<=tot; z++)
+    {
+      var zval = resul[z];
+      if(zval == curval)
+      {
+        modeval=modeval+1;
+        if(modeval > maxval)
+        {
+          mode = curval;
+          maxval = modeval;
+                                        countMode++;
+        }
+      }
+      else
+      {
+        if(modeval == maxval &&  mode != curval)
+        {
+          mode = mode+','+curval;
+                                        countMode++;
+        }
+
+        curval = zval;
+        modeval = 1;
+      }
+    }
+                if(tot == countMode) {
+                    mode = 'No Mode of this set';
+                }
+    $('#r4').val(mode);
+
+  }
+}
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+                </div>
+            </div>
+
+
+</div>
+</form>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+<script type='text/javascript'>
+ 				function check(ad)
+ 				{
+ 					var ch=ad.value;
+ 					if(isNaN(ch))
+ 					{
+ 						var df=ch.substring(0,(ch.length-1))
+ 						ad.value=df;
+ 					}
+ 				}
+
+
+
+ 				function bin()
+ 				{
+ 					var a=$('#nb').val();
+ 					var b=$('#rb').val();
+ 					var c=$('#pb').val();
+ 					if(a == '')
+ 					{
+ 						alert('Enter the number of events');
+ 						return false;
+ 					}
+ 					else if(b == '')
+ 					{
+ 						alert('Enter the number of success');
+ 						return false;
+ 					}
+ 					else if(c == '')
+ 					{
+ 						alert('Enter the Probability of success');
+ 						return false;
+ 					}
+ 					else
+ 					{
+ 						a=parseFloat(a);
+ 						b=parseFloat(b);
+ 						c=parseFloat(c);
+ 						if(c>1)
+ 						{
+ 							alert('The probability of success must be between 0 and 1');
+ 						}
+ 						else if(b>a)
+ 						{
+ 							alert('Number of success r should be less than number of events n');
+ 						}
+ 						else
+ 						{
+ 							var z=1;
+ 							for(var i=a; i>=1; i--)
+ 							{
+ 								z=z*i;
+
+ 							}
+ 							var x=1;
+ 							for(var k=b;k>=1;k--)
+ 							{
+ 								x=x*k;
+ 							}
+
+ 							var s=a-b;
+ 							var t=1;
+ 							for(var j=s;j>=1;j--)
+ 							{
+ 								t=t*j;
+ 							}
+
+ 							var p=z/t;
+
+ 							var y=p/x;
+ 							var d=1-c;
+ 							var e=a-b;
+ 							var f=Math.pow(c,b);
+ 							var g=Math.pow(d,e);
+
+ 							var res=y*f*g;
+ 							if(res=='Infinity')
+ 							{
+ 								res = 0;
+ 							}
+ 							$('#bb').val(res.toFixed(7));
+ 						}
+ 					}
+ 				}
+ 			</script>   <script type="text/javascript">
+ 			function alert(val)
+ 			{
+ 				$("#dynErrDisp").show();
+ 				$("#dynErrDisp").html(val);
+ 			}
+ 			$(document).ready(function() {
+ 				closeModal();
+ 			});
+ 		</script>
+
+<script type="text/javascript">
+ 			var chf_sess = "";
+ 			var chf_sess_mail = "";
+ 			var chf_sess_mobile = "";
+ 		</script>
+
+
+
+
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+
+</body>
+</html>

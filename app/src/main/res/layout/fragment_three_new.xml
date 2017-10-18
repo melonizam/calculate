@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Welcome to EpiCalci"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="Feel free to leave your comments if you are having any troubles making the project. Also follow the steps carefully as the post is very long."
+            android:textColor="#FFF" />
+
+        <!-- Editext for Search -->
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/search_back_2"
+            android:hint="Search Calculator.."
+            android:textColorHint="#FFF"
+            android:textColor="#FFF"
+            android:inputType="textVisiblePassword"
+            android:padding="15dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Get Started"
+        android:textColor="#c3c6cc" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Select Calculator"
+        android:textColor="@color/colorBlue"
+        android:textStyle="bold" />
+
+    <!-- List View -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inputSearch" />
+
+
+</LinearLayout>

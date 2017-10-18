@@ -1,0 +1,202 @@
+<html>
+<head>
+    <style>
+        p.a{
+        padding:3%;
+        background-color:lightgrey;
+        text-align:justify;
+        line-height: 1.45;
+        }
+        .b{text-align:justify;
+        line-height: 1.45;}
+    </style>
+</head>
+<body>
+<div class="col-md-12 col-sm-12">
+    <p style="margin:0 0.1em; font-size:0.95em;"></p>
+    <hr>
+
+    <link rel="stylesheet" href="https://epicalci.com/assets/css/api-ffb7c867f869651f22558d951d63587f7a2c2e82.min.css">
+    <link rel="stylesheet" href="https://epicalci.com/assets/css/calc_basic_container-c2fc0a1313647b0cb137ab7a59f84691bc3cc0f2.min.css">
+    <style type="text/css">
+
+  @-moz-keyframes dcg-loading-pulse {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      -moz-transform: scale(1.5, 1.5);
+    }
+    100% {
+      opacity: 0;
+      -moz-transform: scale(1.5, 1.5);
+    }
+  }
+  @-webkit-keyframes dcg-loading-pulse {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      -webkit-transform: scale(1.5, 1.5);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1.5, 1.5);
+    }
+  }
+  @-o-keyframes dcg-loading-pulse {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      -o-transform: scale(1.5, 1.5);
+    }
+    100% {
+      opacity: 0;
+      -o-transform: scale(1.5, 1.5);
+    }
+  }
+  @keyframes dcg-loading-pulse {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5, 1.5);
+    }
+  }
+
+  .dcg-loading-div-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #FFF;
+    z-index: 1000;
+  }
+
+  .dcg-loading-background-div {
+    animation: dcg-loading-pulse 2.2s infinite;
+    left: 50%;
+    background: #eee;
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    moz-animation: dcg-loading-pulse 2.2s infinite;
+    ms-animation: dcg-loading-pulse 2.2s infinite;
+    o-animation: dcg-loading-pulse 2.2s infinite;
+    webkit-animation: dcg-loading-pulse 2.2s infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -70px;
+    margin-top: -70px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .dcg-loading-div {
+    color: #fff;
+    font-size: 18px;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: transparent;
+    margin-left: -70px;
+    margin-top: -70px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: no-repeat center center;
+    background-size: 120px 25px;
+
+  }
+</style>
+    <title>Desmos | Scientific Calculator</title>
+
+
+
+    <div class="dcg-loading-div-container" style="display: none;">
+        <div class="dcg-loading-background-div"></div>
+        <div class="dcg-loading-div">Loading...</div>
+    </div>
+
+
+    <div id="main" class="dcg-scientific-container"><div class="dcg-calc-basic-main-wrapper dcg-tap-container touchtracking_id_1 dcg-hovered"><div role="application" class="dcg-calc-basic-main" style="font-size: 16px;"><div class="dcg-basic-list-container" role="complementary" aria-label="Expression List"><div class="dcg-basic-list-placeholder"><div style="display: none"></div></div><div class="dcg-basic-list"><div class="dcg-basic-expression"><div style="display: none"></div><div style="display: none"></div><div class="dcg-exp-mathquill-container"><div class="dcg-mq-editable-field dcg-mq-math-mode" aria-label="Expression 1:"><span class="dcg-mq-textarea"><textarea aria-label="Expression 1:"></textarea></span><span class="dcg-mq-root-block dcg-mq-empty"></span></div></div><div class="dcg-exp-output-container"><div style="display: none"></div><div style="display: none"></div></div></div></div></div><div class=""><div class="dcg-keypad-control-bar dcg-do-not-blur" role="group" aria-label="Control Bar"><div class="dcg-keypad-control-btn dcg-selected dcg-selectable-btn" role="button" aria-label="main" dcg-command="main" ontap="" aria-pressed="false" tabindex="-1">main</div><div class="dcg-keypad-control-btn dcg-selectable-btn" role="button" aria-label="A B C" dcg-command="ABC" ontap="" aria-pressed="false" tabindex="-1">abc</div><div class="dcg-keypad-control-btn dcg-selectable-btn" role="button" aria-label="Functions" dcg-command="functions" ontap="" aria-pressed="false" tabindex="-1">func</div><div style="display: none"></div><div class="dcg-keypad-control-toggle dcg-toggled" role="button" tabindex="0" aria-label="Degrees selected. Press Enter to switch to Radians." aria-pressed="true" ontap=""><div class="dcg-ctrl-toggle-option">rad</div><div class="dcg-ctrl-toggle-option">deg</div><div class="dcg-ctrl-toggle-cover"></div></div><div class="dcg-keypad-control-btn dcg-disabled" role="button" aria-disabled="true" aria-label="Undo" dcg-command="undo" ontap="" aria-pressed="false"><i class="dcg-icon-undo"></i></div><div class="dcg-keypad-control-btn dcg-disabled" role="button" aria-disabled="true" aria-label="Redo" dcg-command="redo" ontap="" aria-pressed="false"><i class="dcg-icon-redo"></i></div><div style="display: none"></div><div class="dcg-keypad-control-btn dcg-disabled" role="button" aria-disabled="true" aria-label="clear all" dcg-command="clearall" ontap="" aria-pressed="false">clear all</div></div><div role="group" aria-label="keypad" class="dcg-basic-keypad dcg-do-not-blur"><div class="dcg-keypad-row"><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="7" aria-label="7" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">7</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="8" aria-label="8" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">8</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="9" aria-label="9" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">9</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="divide" aria-label="Divide" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span class="dcg-mq-binary-operator" aria-hidden="true">÷</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="squared" aria-label="Squared" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><var aria-hidden="true">a</var><span class="dcg-mq-supsub dcg-mq-non-leaf dcg-mq-sup-only" aria-hidden="true"><span class="dcg-mq-sup" aria-hidden="true"><span aria-hidden="true">2</span></span></span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="superscript" aria-label="Superscript" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><var aria-hidden="true">a</var><span class="dcg-mq-supsub dcg-mq-non-leaf dcg-mq-sup-only" aria-hidden="true"><span class="dcg-mq-sup" aria-hidden="true"><var aria-hidden="true">b</var></span></span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="fraction" aria-label="A over B" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span class="dcg-mq-fraction dcg-mq-non-leaf" aria-hidden="true"><span class="dcg-mq-numerator" aria-hidden="true"><var aria-hidden="true">a</var></span><span class="dcg-mq-denominator" aria-hidden="true"><var aria-hidden="true">b</var></span><span style="display:inline-block;width:0">&#8203;</span></span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="backspace" aria-label="Backspace" ontap=""><span class="dcg-keypad-btn-content"><i class="dcg-icon-delete"></i></span></a></div></div><div class="dcg-keypad-row"><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="4" aria-label="4" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">4</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="5" aria-label="5" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">5</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="6" aria-label="6" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">6</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="times" aria-label="Times" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span class="dcg-mq-binary-operator" aria-hidden="true">×</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="sqrt" aria-label="Square Root" ontap="" framesymbol="sqrt"><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">√</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="nthroot" aria-label="Nth Root" ontap="" framesymbol="nthroot"><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><sup class="dcg-mq-nthroot dcg-mq-non-leaf" aria-hidden="true"><var aria-hidden="true">n</var></sup><span class="dcg-mq-scaled" aria-hidden="true"><span class="dcg-mq-sqrt-prefix dcg-mq-scaled" style="transform: scale(1, 0.932609);">√</span><span class="dcg-mq-sqrt-stem dcg-mq-non-leaf dcg-mq-empty" aria-hidden="true" style=""></span></span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="leftparen" aria-label="Left Parenthesis" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">(</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="rightparen" aria-label="Right Parenthesis" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">)</span></span></span></span></a></div></div><div class="dcg-keypad-row"><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="1" aria-label="1" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">1</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="2" aria-label="2" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">2</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="3" aria-label="3" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">3</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="minus" aria-label="Minus" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true" class="">−</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="sin" aria-label="Sine" ontap="" framesymbol="sin"><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><var aria-hidden="true" class="dcg-mq-operator-name">s</var><var aria-hidden="true" class="dcg-mq-operator-name">i</var><var aria-hidden="true" class="dcg-mq-operator-name">n</var></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="cos" aria-label="Cosine" ontap="" framesymbol="cos"><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><var aria-hidden="true" class="dcg-mq-operator-name">c</var><var aria-hidden="true" class="dcg-mq-operator-name">o</var><var aria-hidden="true" class="dcg-mq-operator-name">s</var></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="tan" aria-label="Tangent" ontap="" framesymbol="tan"><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><var aria-hidden="true" class="dcg-mq-operator-name">t</var><var aria-hidden="true" class="dcg-mq-operator-name">a</var><var aria-hidden="true" class="dcg-mq-operator-name">n</var></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="pi" aria-label="Pi" ontap="" framesymbol="pi"><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span class="dcg-mq-nonSymbola" aria-hidden="true">π</span></span></span></span></a></div></div><div class="dcg-keypad-row"><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="0" aria-label="0" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">0</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="decimal" aria-label="Decimal" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">.</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="ans" aria-label="Answer" ontap=""><span class="dcg-keypad-btn-content">ans</span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="plus" aria-label="Plus" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true" class="">+</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="pipes" aria-label="Absolute Value" ontap="" framesymbol="abs"><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span aria-hidden="true">|</span><var aria-hidden="true">a</var><span aria-hidden="true">|</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="ln" aria-label="Natural Log" ontap="" framesymbol="ln"><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><var aria-hidden="true" class="dcg-mq-operator-name">l</var><var aria-hidden="true" class="dcg-mq-operator-name">n</var></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn" dcg-command="%" aria-label="Percent Of" ontap=""><span class="dcg-keypad-btn-content"><span class="dcg-mq-btn-content dcg-mq-math-mode" aria-label=""><span aria-hidden="true" class="dcg-mq-selectable">$$</span><span class="dcg-mq-root-block"><span class="dcg-mq-nonSymbola" aria-hidden="true">%</span></span></span></span></a></div><div class="dcg-keypad-btn-container" style=""><a role="button" class="dcg-keypad-btn dcg-keypad-btn-dark" dcg-command="enter" aria-label="Enter" ontap=""><span class="dcg-keypad-btn-content"><i class="dcg-icon-arrow-enter"></i></span></a></div></div></div></div><div style="display: none"></div><span class="dcg-calc-branding"><span class="dcg-powered-by" aria-label="powered by Desmos">powered by</span><span class="dcg-logo-icon"><i class="dcg-icon-desmos"></i></span></span></div></div></div>
+
+
+
+
+    <script type="text/javascript">
+  // catches errors within iframe and promotes them to qunit during tests
+  try {
+    window.onerror=window.top.onerror;
+  } catch (ex){}
+  if(!window.Desmos) window.Desmos = {};
+  window.Desmos.config = {"sciKeypad": true, "degreeMode": false, "ans": true};
+</script>
+    <!-- Pull config information, and include it in Desmos.config -->
+
+
+    <script src="https://epicalci.com/assets/js/api-49c822f8ccde241a4cf5245ea84d62b5c8284a36.min.js"></script>
+    <script src="https://epicalci.com/assets/js/calculator_basic-4b85b689b52803ce9d4b5a72cba55b82a783a48d.min.js"></script>
+    <script>
+    require([
+      'toplevel/calculator_basic',
+      'config',
+      'testbridge',
+      'lib/app-bridge',
+      'jquery'
+    ], function (API, Config, TestBridge, AppBridge, $) {
+      $('.dcg-loading-div-container').fadeOut();
+
+      var mainElt = document.getElementById('main');
+      var opts = Config.all();
+      if (Config.get('sciKeypad')) {
+        $('#main').addClass('dcg-scientific-container');
+        window.Calc = API.ScientificCalculator(mainElt, opts);
+      } else {
+        $('#main').addClass('dcg-four-function-container');
+        window.Calc = API.FourFunctionCalculator(mainElt, opts);
+      }
+
+      window.Calc.focusFirstExpression()
+      TestBridge.ready();
+      AppBridge.hideLoadingScreen();
+    });
+  </script>
+</div>
+
+
+</body>
+</html>

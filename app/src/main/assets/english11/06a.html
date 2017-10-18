@@ -1,0 +1,268 @@
+<html>
+
+<title>
+    <link rel="shortcut icon" href="https://epicalci.com/assets/images/favicon.png">
+    <link href="https://epicalci.com/assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <link href="https://epicalci.com/assets/css/embedded.css" rel="stylesheet">
+
+    <link href="https://epicalci.com/assets/css/owl.carousel.css" rel="stylesheet">
+
+    <link href="https://epicalci.com/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="https://epicalci.com/assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <script src="https://epicalci.com/assets/js/jquery.js"></script>
+    <!-- <script src="https://epicalci.com/assets/js/jquery.min65e9.js"></script>
+    <script src="https://epicalci.com/assets/js/jquery.sticky.js"></script>  --><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://epicalci.com/dist/math.js"></script>
+    <script src="https://epicalci.com/assets/js/bootstrap.min.js"></script>
+</title>
+<body>
+
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Fisher Test P Value Calculation</h3>
+                    <p></p>
+                    <hr>
+
+                    <form action="" id="stat_one" method="post" class="form-horizontal">
+
+                        <div id="dispCalcConts">
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div style="padding-top:10px"></div>
+                                    <div class="clear"> </div>
+
+                                    <!-- ec_calculator begins -->
+                                    <div class="ec_calculator_gen clearfix">
+
+                                        <div class="clearfix"></div>  <div class='clear'></div>
+                                        <form name=first>
+                                            <div id="overlayLoader">
+                                                <div class="loader"> </div>
+                                            </div>
+                                            <div id="dispCalcConts">
+                                                <table>
+                                                    <div class='group clearfix'>
+                                                        <div class="formrow">
+                                                            <div class="row">
+                                                                <div class="col-md-4"><label>Enter F-value:</label></div>
+                                                                <div class="col-md-8"> <input type="text" name=fva id=fva class='easypositive form-control'></div>
+                                                            </div></div></div>
+                                                    <div class='group clearfix'>
+                                                        <div class="formrow">
+                                                            <div class="row">
+                                                                <div class="col-md-4"><label>Enter Degrees of freedom (between):</label></div>
+                                                                <div class="col-md-8"><input type="text" name=ndf id=ndf class='easypositive-integer form-control'></div>
+                                                            </div></div></div>
+                                                    <div class='group clearfix'>
+                                                        <div class="formrow">
+                                                            <div class="row">
+                                                                <div class="col-md-4"><label>Enter Degrees of freedom (within):</label></div>
+                                                                <div class="col-md-8"><input type="text" name=ddf id=ddf class='easypositive-integer form-control'></div>
+                                                            </div></div></div>
+                                                </table>
+                                                <div class="formrow">
+                                                    <div class="row">
+                                                        <div class="col-md-4"></div>
+                                                        <div class="col-md-4"> <button type="button" onclick=calc()  class="btn">Calculate</button></div>
+                                                    </div></div>
+                                                <table align=center>
+
+                                                    <div class='group clearfix'>
+                                                        <div class="formrow">
+                                                            <div class="row">
+                                                                <div class="col-md-4"><lable>Answer Probability :</lable></div>
+                                                                <div class="col-md-8"> <input name=pva class="form-control" id=pva type=text readonly></div>
+                                                            </div></div></div>
+                                                </table></div>  </form>
+                                    </div>
+                                    <!-- ec_calculator ends -->
+                                    <div class="clear"> </div>
+
+                                </div>
+
+                            </div>
+                            <!-- content_right ends -->
+                        </div>
+                </div>
+            </div>
+
+
+</div>
+</form>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+  var chf_rss=true;
+  function getPathFromUrl(url){return url.split("?")[0];}
+  var curUrl = window.location.pathname;
+  var basName = curUrl.replace(/^.*[\/\\]/g, '');
+  var curencyIndx = false;
+</script>
+<script src="../js/jquery.min65e9.js?v0.1"></script>
+<script src='../commond8be.js?v4.4'></script>
+<script src='../js/jquery.sticky.js'></script>
+<!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+
+
+<script type="text/javascript">
+
+var fx = 1*0;
+var df1 = 1*0;
+var df2 = 1*0;
+var p1 = 1*0;
+
+var pi = Math.PI;
+var pj2 = pi/2;
+var pj4 = pi/4;
+var px2 = 2*pi;
+var e = Math.E;
+var exx = 1.10517091807564;
+var dgr = 180/pi;
+
+function Fspin(f,df1,df2)
+{
+    var x=df2/(df1*f+df2);
+    if((df1%2)==0)
+    {
+      return LJspin(1-x,df2,df1+df2-4,df2-2)*Math.pow(x,df2/2);
+    }
+    if((df2%2)==0)
+    {
+      return 1-LJspin(x,df1,df1+df2-4,df1-2)*Math.pow(1-x,df1/2);
+    }
+    var tan = Math.atan(Math.sqrt(df1*f/df2));
+    var a = tan/pj2;
+    var sat = Math.sin(tan);
+    var cot=Math.cos(tan);
+    if(df2>1)
+    {
+      a=a+sat*cot*LJspin(cot*cot,2,df2-3,-1)/pj2;
+    }
+    if(df1==1)
+    {
+      return 1-a;
+    }
+    var c=4*LJspin(sat*sat,df2+1,df1+df2-4,df2-2)*sat*Math.pow(cot,df2)/pi;
+    if(df2==1)
+    {
+      return 1-a+c/2;
+    }
+    var k=2;
+    while(k<=(df2-1)/2)
+    {
+      c=c*k/(k-.5);
+      k=k+1;
+    }
+    return 1-a+c;
+}
+
+function LJspin(q,i,j,b)
+{
+   var zz=1;
+   var z=zz;
+   var k=i;
+   while(k<=j)
+   {
+     zz=zz*q*k/(k-b);
+     z=z+zz;
+     k=k+2;
+   }
+   return z;
+}
+
+function Fcall(x)
+{
+  var zk;
+  if(x>=0)
+  {
+    zk=""+(x+0.0000005);
+  }
+  else
+  {
+    zk=""+(x-0.0000005);
+  }
+ return zk.substring(0,zk.indexOf(".")+7);
+}
+
+function calc()
+{
+  var fx = document.getElementById("fva").value;
+  var ndf = Math.floor(document.getElementById("ndf").value);
+  var ddf = Math.floor(document.getElementById("ddf").value);
+  document.getElementById("ndf").value = ndf;
+  document.getElementById("ddf").value = ddf;
+  if(fx=="" || ndf=="" || ddf=="")
+  {
+    alert ("Required all field values");
+  }
+    var p1 = Fcall(Fspin(eval(fx),eval(ndf),eval(ddf)));
+    if(p1<.0001||p1>1)
+    {
+      p1="<.0001";
+    }
+    document.getElementById("pva").value = p1;
+    if(document.getElementById("pva").value!="<.0001")
+    {
+      document.getElementById("pva").value = rnd4(document.getElementById("pva").value);
+    }
+
+}
+
+function rnd4(x)
+{
+  return Math.round(x*10000)/10000;
+}
+
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+<script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+
+
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+
+
+</body>
+</html>

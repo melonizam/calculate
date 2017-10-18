@@ -1,0 +1,504 @@
+<html>
+
+<body>
+
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Two Way Anova Calculator</h3>
+                    <p style="word-break: break-all;"></p>
+                    <hr>
+
+                    <form action="" id="stat_one" method="post" class="form-horizontal">
+
+                        <div id="dispCalcConts">
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div style="padding-top:10px"></div>
+                                    <div class="clear"> </div>
+
+                                    <!-- ec_calculator begins -->
+                                    <div class="ec_calculator_gen clearfix">
+
+                                        <div class="clearfix"></div>  <div class='clear'></div>
+                                        <form name=first>
+                                            <div id="overlayLoader">
+                                                <div class="loader"> </div>
+                                            </div>
+                                            <div id="dispCalcConts"> <table>
+                                                <div class="formrow">
+                                                    <div class="row">
+                                                        <div class="col-md-4"><label>Enter Number of Values for </label></div>
+                                                    </div></div>
+
+                                                <div class="formrow">
+                                                    <div class="row">
+                                                        <div class="col-md-4"><label>Rows</label> </div>
+                                                        <div class="col-md-8"><input type=text id=norow class="easypositive form-control" ></div>
+                                                    </div></div>
+                                                <div class="formrow">
+                                                    <div class="row">
+                                                        <div class="col-md-4"><label> Columns  </label></div>
+                                                        <div class="col-md-8"><input type=text id=nocols class="easypositive form-control"></div>
+                                                    </div></div>
+                                                <div class='group clearfix'>
+                                                    <div class="formrow">
+                                                        <div class="row">
+                                                            <div class="col-md-4"></div>
+                                                            <div class="col-md-4"><input type=button value=Matrix class="btn" onclick=matrix_table()> </div>
+                                                        </div></div></div>
+                                                <td colspan=2> <div id=matrix align=center> </div><div id='alrt1' style='color:red;'></div> </td> </tr>
+                                                <tr> <td colspan=2> <div class='result'> <table align=center>
+                                                    <tr> <th colspan=5 align=left><h3>Answer  : </h3>  </th> </tr>
+                                                    <tr> <th> &nbsp; </th> <th> SS  </th>  <th> df  </th>  <th> MS  </th>  <th> F  </th> </tr>
+                                                    <tr> <td>  Between  </td>  <td> <input class="form-control" type=text name=bss id=bss readonly></td>  <td> <input class="form-control" type=text name=bdf id=bdf readonly></td> <td> <input class="form-control" type=text name=bms id=bms readonly></td> <td> <input type=text name=fra class="form-control" id=fra readonly></td> </tr>
+                                                    <tr> <td>  Within  </td>  <td> <input class="form-control" type=text name=wss id=wss readonly></td>  <td> <input class="form-control" type=text name=wdf id=wdf readonly></td> <td> <input class="form-control" type=text name=wms id=wms readonly></td> </tr>
+                                                    <tr> <td>  Total  </td>  <td> <input class="form-control" type=text name=tss id=tss readonly></td>  <td> <input class="form-control" type=text name=tdf id=tdf readonly></td> </tr>
+                                                </table> </div> </td></tr>
+                                                <!-- <tr> <td colspan=2> <table align=center> <tr> <td> SS = Sum of Squares, </td> <td> df = Degrees of Freedom </td> </tr> <tr> <td> MS = Mean Squares, </td> <td> F = F - Ratio Test </td> </tr> </table> </td> </tr> -->
+                                            </table>
+                                            </div>  </form>
+                                    </div>
+                                    <!-- ec_calculator ends -->
+                                    <div class="clear"> </div>
+
+                                </div>
+
+                            </div>
+                            <!-- content_right ends -->
+                        </div>
+                </div>
+            </div>
+
+
+</div>
+</form>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+.inpcolo
+{
+  color:black;
+}
+</style>
+<script type=text/javascript>
+var c=0; var valc=0;
+function matrix_table()
+{
+  document.getElementById('matrix').innerHTML = '';
+  rows = $('#norow').val();
+  cols = $('#nocols').val();
+  var tabls = new Array();
+  if(rows==''||cols==''){
+$('#alrt1').html('Enter the field');
+
+}
+if(rows<=1||cols<=1){
+$('#alrt1').html('Enter rows and columns should be geater than 1');
+
+}
+else{
+$('#alrt1').html('');
+
+  if(parseFloat(rows)>20 || parseFloat(cols)>20)
+  {
+    $('#alrt1').html('Rows and columns does not allow more than 20');
+
+    return false;
+  }
+  else
+  {
+
+    for(i=0;i<rows;i++)
+    {
+      tabls[i] = new Array();
+      for(j=0;j<cols;j++)
+      {
+        tabls[i][j] = '<input class="form-control" type=text size=36 id=anova'+i+j+' placeholder=ex:1,2,3,4 onkeyup=checnum(this),check()>';
+      }
+    }
+
+      // Declare variables and create the header, footer, and caption.
+      var oTable = document.createElement('TABLE');
+      var oTHead = document.createElement('THEAD');
+      var oTBody = document.createElement('TBODY');
+      var oRow, oCell;
+      var i, j;
+
+      // Insert the created elements into oTable.
+      oTable.appendChild(oTHead);
+      oTable.appendChild(oTBody);
+      //oTable.border = 1;
+      oTBody.setAttribute('align','center');
+      oTBody.setAttribute('cellpadding','10');
+      oTBody.setAttribute('cellspacing','10');
+
+      // Insert rows and cells into bodies.
+      for (i=0; i<tabls.length; i++)
+      {
+        oRow = document.createElement('TR');
+        oTBody.appendChild(oRow);
+        for (j=0; j<tabls[i].length; j++)
+        {
+          oCell = document.createElement('TD');
+          oCell.innerHTML = tabls[i][j];
+          oRow.appendChild(oCell);
+        }
+      }
+
+      // Insert the table into the document tree.
+      var frtb = document.getElementById('matrix');
+      frtb.appendChild(oTable);
+      document.getElementById('matrix').innerHTML += '<br><center><div class=group clearfix><div class="formrow"><div class="row"> <div class="col-md-4"></div><input type=button name=re value=Calculate class="btn" onclick=calculate();> &nbsp; </center></div></div></div><div id=alrt  align=left style=color:red; ></div><br>';
+  }
+}
+$('#matrix').show();
+}
+
+     function calculate()
+     {
+
+  //var rows = vals.split('\n');
+  var rlen = $('#norow').val(); //rows.length;
+  var clen = $('#nocols').val();
+  var rowvals = new Array();
+  var realval = new Array();
+  var colvals = new Array();
+  var maxim = new Array();
+  var totno = 0;
+    var maxi = 0;
+
+check();
+if(valc=='1'){
+$('#alrt').html('Enter the Field');
+}
+else{
+if(c=='1'){
+
+$('#alrt').html('Enter Valid data');
+//alert('Enter Valid data');
+}
+else{
+$('#alrt').html('');
+
+  for(var i=0;i<rlen;i++)
+  {
+    realval[i] = new Array();
+    var maxis = clen;
+
+    for(var j=0;j<clen;j++)
+    {
+      var ano = '#anova'+i+j;
+      var vals = $(ano).val();
+
+      if(vals!='')
+      {
+        realval[i][j] = $(ano).val();
+        totno++;
+      }
+      else
+      {
+        maxis = maxis -1;
+      }
+    }
+    maxim[i]=maxis;
+    if(maxi<maxis)
+    {
+      maxi= maxis;
+    }
+  }
+// Sum of x value, Mean and number of elements in each column and rows
+  var sumx = new Array();
+  var nocount = new Array();
+  var mean = new Array();
+  var xsquare = new Array();
+  var sumxsqr = new Array();
+
+
+valu=new Array();
+val1=new Array();
+var z=0;
+
+for(var i=0;i<rlen;i++){
+
+for(var j=0;j<clen;j++)
+  {
+valu=realval[i][j];
+
+ val1=valu.split(',');
+
+var load=val1.length;
+var sum0=0;
+for(var k=0;k<val1.length;k++){
+sum0=parseFloat(sum0)+parseFloat(val1[k]);
+}
+
+var ans=(sum0/val1.length);
+mean[z]=parseInt(ans);
+z++;
+
+
+}
+
+}
+
+
+
+var sum1=0;
+var ssw=new Array();
+valu=new Array();
+val1=new Array();
+var z=0;
+for(var i=0;i<rlen;i++){
+
+for(var j=0;j<clen;j++)
+  {
+valu=realval[i][j];
+
+ val1=valu.split(',');
+
+for(var k=0;k<val1.length;k++){
+var sswval=val1[k]-mean[z];
+
+sum1=sum1+Math.pow(sswval,2);
+
+}
+z++;
+}
+
+}
+var dfw=(load-1)*rlen*clen;
+var msw=sum1/dfw;
+var sum2=0;
+//rowmean
+var rowmean=new Array();
+
+var z=0;var i=0;var k=1;
+for(var j=0;j<rlen;j++){
+
+ var sumans=0;
+while(i<(clen*k)){
+sumans=parseFloat(sumans)+parseFloat(mean[i]);
+
+ i++;
+
+
+}
+rowmean[z]=sumans/clen;
+z++;k++;
+}
+
+
+
+
+var sum_row_mean=0;
+
+for(var i=0;i<rowmean.length;i++){
+sum_row_mean=sum_row_mean+ rowmean[i];
+}
+sum_row_mean=sum_row_mean/rlen;
+
+
+
+//ssr
+var sum_row_mean_val=0;
+
+for(var i=0;i<rowmean.length;i++){
+sum_row_mean_val=parseFloat(sum_row_mean_val)+parseFloat(Math.pow((parseFloat(rowmean[i])-parseFloat(sum_row_mean)),2));
+
+}
+
+var ssr=load*clen*sum_row_mean_val;
+
+var colmean=new Array();
+
+
+//every col mean
+var z=0;
+for(var j=0;j<clen;j++){
+ i=j;
+ var sumans=0;
+while(i<mean.length){
+sumans=parseFloat(sumans)+parseFloat(mean[i]);
+
+ i=parseFloat(i)+parseFloat(clen);
+
+
+}
+colmean[z]=sumans/rlen;
+z++;
+}
+
+
+//ssc
+var sum_row_mean_val1=0;
+for(var i=0;i<colmean.length;i++){
+sum_row_mean_val1=parseFloat(sum_row_mean_val1)+Math.pow((parseFloat(colmean[i])-parseFloat(sum_row_mean)),2);
+
+}
+
+
+//interaction
+var meanans=0;var j=0;
+var k=0;var j=0;var x=1;
+for(var i=0;i<rlen;i++){
+var l=0;
+while(j<(clen*x)){
+
+ meanans=meanans+Math.pow((mean[j]-colmean[l]-rowmean[k]+sum_row_mean),2);
+
+j++;l++;
+
+}
+k++;
+x++;
+
+}
+
+var ssb=load*meanans;
+var dfb=(rlen-1)*(clen-1);
+var msb=ssb/dfb;
+var dfr=rlen-1;
+var msr=ssr/dfr;
+
+var ssc=load*rlen*sum_row_mean_val1;
+
+var dfc=clen-1;
+
+var msc=ssc/dfc;
+
+//between
+$('#bss').val(ssb.toFixed(4));
+$('#bdf').val(dfb.toFixed(4));
+msb=msb.toFixed(4);
+$('#bms').val(msb);
+
+
+
+
+//within
+$('#wss').val(sum1.toFixed(4));
+$('#wdf').val(dfw.toFixed(4));
+$('#wms').val(msw.toFixed(4));
+
+
+//ftest
+var ftest=parseFloat(msr*msc)/parseFloat(msw);
+$('#fra').val(ftest.toFixed(4));
+//total
+var totalss=parseFloat(ssb)+parseFloat(ssr)+parseFloat(sum1)+parseFloat(ssc);
+var totaldf=parseFloat(dfw)+parseFloat(dfb)+parseFloat(dfc)+parseFloat(dfr);
+$('#tss').val(totalss.toFixed(4));
+$('#tdf').val(totaldf.toFixed(4));
+}
+}
+}
+
+
+
+/*function checnum(as)
+  {
+    var a = as.value;
+
+    for(var x=0; x<a.length; x++)
+    {
+       var ff = a[x];
+       if(isNaN(a) && ff!=' ')
+       {
+      a = a.substring(0,(a.length-1));
+      as.value = a;
+       }
+       }
+  }*/
+function rst(){
+
+$('#matrix').hide();
+
+}
+function checnum(as)
+{
+var a=new Array();
+     a = as.value;
+
+a= a.replace(/[^\d,.]/g, '');
+      a=a.replace(/\,\,/g, ',');
+      as.value=a.replace(/\.\./g, '.');
+    var b=new Array();
+
+var i=a.length;
+
+var com=a[i-1];
+if(Number(com)){
+c=0;
+}
+else{
+c=1;
+
+}
+
+
+}
+function check(){
+
+rows=$('#norow').val();
+cols=$('#nocols').val();
+for(i=0;i<rows;i++)
+    {
+
+      for(j=0;j<cols;j++)
+      {
+var val=$('#anova'+i+j).val();
+      if(val==''){
+$('#alrt').html('enter the Field');
+valc=1;
+
+}
+else{
+$('#alrt').html('');
+valc=0;
+}
+      }
+    }
+
+}
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+<script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+N
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+</body>
+</html>

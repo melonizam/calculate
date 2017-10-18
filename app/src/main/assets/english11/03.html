@@ -1,0 +1,392 @@
+<html>
+
+<body>
+
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Standard Deviation Calculator</h3>
+                    <p></p>
+                    <hr>
+
+                    <form action="" id="stat_one" method="post" class="form-horizontal">
+
+                        <div id="dispCalcConts">
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div class="content clearfix" id="alarmContentDisplay">
+
+                                        <!-- content_left begins -->
+                                        <div class="content_left clearfix">
+                                            <div style="clear: both;"></div>
+                                            <!-- Code to placed for Second 300x250 ad -->
+                                            <!-- boxad ends -->
+                                            <div style="padding-top:5px"></div>
+                                            <div class="clear"> </div>
+                                            <!-- ec_calculator begins -->
+                                            <div class="ec_calculator_gen clearfix">
+
+                                                <div class="clearfix"></div>  <div class='clear'></div>
+                                                <form name=first>
+                                                    <div id="overlayLoader">
+                                                        <div class="loader"> </div>
+                                                    </div>
+                                                    <div id="dispCalcConts"><div class='group clearfix'>
+                                                    </div>
+
+                                                        <div class='group clearfix'>
+                                                            <label>Enter all the numbers separated by comma ','.</label>
+                                                        </div>
+
+                                                        <div class='group clearfix'>
+                                                            <div class="formrow">
+                                                                <label><b>E.g: 13,23,12,44,55</b></label>
+                                                                <div class="row">
+                                                                    <div class="col-md-4"></div>
+                                                                    <textarea id=a11 class="form-control" onkeyup='checnum(this);trimExtraComma();'></textarea>
+                                                                </div>
+                                                            </div></div>
+
+                                                        <div class='group clearfix'>
+                                                            <div class="formrow">
+                                                                <div class="row">
+                                                                    <div class="col-md-4"></div>
+                                                                    <div class='group clearfix' align=center>
+                                                                        <div class="col-md-4">  <button type="button"  onclick=madd() class="btn">Calculate</button></div>
+                                                                    </div>
+                                                                </div></div></div>
+                                                        <div class='result'>
+                                                            <div class='group clearfix'>
+                                                                <h4>Answer :</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div id='resultHide' class='result'>
+                                                            <div class='margin_both group clearfix'>
+                                                                <div class='stand'>
+                                                                    <div class='stand_tit' class="form-control">Total Numbers</div>
+                                                                    <div class='stand_num' id=r1> </div>
+                                                                </div>
+
+                                                                <div class='stand'>
+                                                                    <div class='stand_tit'>Mean (Average)</div>
+                                                                    <div class='stand_num' id=r2> </div>
+                                                                </div>
+
+                                                                <div class='stand'>
+                                                                    <div class='stand_tit'>Standard deviation</div>
+                                                                    <div class='stand_num' id=r4> </div>
+                                                                </div>
+
+                                                                <div class='stand'>
+                                                                    <div class='stand_tit'>Variance(Standard deviation)</div>
+                                                                    <div class='stand_num' id=r3> </div>
+                                                                </div>
+
+                                                                <div class='stand'>
+                                                                    <div class='stand_tit'>Population Standard deviation</div>
+                                                                    <div class='stand_num' id=r5> </div>
+                                                                </div>
+
+                                                                <div class='stand'>
+                                                                    <div class='stand_tit'>Variance(Population Standard deviation)</div>
+                                                                    <div class='stand_num' id=r6> </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div id='chart1'></div>
+                                                        </div></div>  </form>
+                                            </div>
+                                            <!-- ec_calculator ends -->
+                                            <div class="clear"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+  var easyinputs = document.getElementsByTagName("INPUT");
+  for (var ies = 0; ies < easyinputs.length; ies++)
+  {
+      if (easyinputs[ies].type === 'button')
+      {
+    easyinputs[ies].style.visibility='hidden';
+    if ((easyinputs[ies].offsetTop-10)<0)
+    {
+      document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+    }
+    else
+    {
+      document.getElementById("overlayLoader").style.top = (easyinputs[ies].offsetTop-10)+"px";
+    }
+      }
+      else
+      {
+    document.getElementById("overlayLoader").style.top = (document.getElementById('dispCalcConts').offsetTop+(document.getElementById('dispCalcConts').offsetHeight/4))+"px";
+      }
+      if (easyinputs[ies].type === 'reset')
+      {
+    easyinputs[ies].style.visibility='hidden';
+      }
+  }
+</script>
+
+<div class='clearfix'></div><div class="paddingTop"></div>
+<div align='center'><div class="clearfix"> </div>
+    <div style="padding-top:5px"></div>
+
+    <div style="padding-top:5px"></div>
+    <div class="clearfix"> </div> </div>
+<div class='clear'> </div><div class="paddingTop"></div><div class='clearfix'></div><!--script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-5279176980875369"
+     data-ad-slot="5868120939"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script-->
+</div>
+<!-- content_left ends -->
+
+<!-- content_right begins -->
+
+<!-- content_right ends -->
+<div class="clear"> </div>
+<!-- ad begins -->
+<!-- Code to placed for 728x90 ad -->
+
+<!-- Code to placed for 728x90 ad -->
+<!-- ad ends -->
+<div class="clear"> </div></div>
+<!-- content ends -->
+
+<script type="text/javascript">
+  var chf_rss=true;
+  function getPathFromUrl(url){return url.split("?")[0];}
+  var curUrl = window.location.pathname;
+  var basName = curUrl.replace(/^.*[\/\\]/g, '');
+  var curencyIndx = false;
+</script>
+<script src="https://epicalci.com/assets/js/jquery.min65e9.js?v0.1"></script>
+<script src='https://epicalci.com/assets/js/commond8be.js?v4.4'></script>
+<script src='https://epicalci.com/assets/js/jquery.sticky.js'></script>
+<!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+<script type='text/javascript' src='https://epicalci.com/assets/js/graphs/gp/highcharts.js'></script>
+<script type='text/javascript'>
+function madd()
+{
+    var vva = $('#a11').val();
+    if(vva == '')
+    {
+        alert('Enter Data');
+        ('#a11').focus();
+        return false;
+    }
+    {
+        vva = vva.replace(' ','');
+        var resul;
+        var bb = true;
+        if(vva != '')
+        {
+                resul = vva.split(',');
+        }
+
+        for(var v=0; v<resul.length; v++)
+        {
+                var d = resul[v];
+                if(isNaN(d) || d == '')
+                {
+                        alert('The number '+d+' is not a valid one');
+                        var bb = false;
+                        break;
+                }
+        }
+
+        if(bb == true)
+        {
+                $('#resultHide').show();
+                var tot = resul.length;
+                var mean=0;
+                $('#r1').html(tot);
+
+                //Mean calculation
+                for(var c=0; c<tot; c++)
+                {
+                        mean = mean+parseFloat(resul[c]);
+                }
+                mean = mean/tot;
+                var mean1 = Math.round(mean*100000)/100000;
+                $('#r2').html(mean1);
+
+                //Variance calculation
+                var variance=0;
+                var b;
+                var varian;
+                for(var a=0; a<tot; a++)
+                {
+                        variance = variance+Math.pow((parseFloat(resul[a])-mean),2);
+                        b = tot-1;
+                        varian = variance/b;
+                        var varian1 = Math.round(varian*100000)/100000;
+                }
+                $('#r3').html(varian1);
+
+
+                //Standard Deviation Calculation
+                var sd=0;
+                {
+                        sd = Math.sqrt(varian);
+                        var sd1 = Math.round(sd*100000)/100000;
+                }
+                $('#r4').html(sd1);
+
+                //Population Standard deviation
+                var pop = 0;
+                {
+                        pop = variance/tot;
+                        pop1 = Math.sqrt(pop);
+                        var pop2 = Math.round(pop1*100000)/100000;
+                }
+                $('#r5').html(pop2);
+                //Variance Population Standard deviation
+                var varpop = 0;
+                {
+                        varpop = variance/tot;
+                        var varpop1 = Math.round(varpop*100000)/100000;
+                }
+                $('#r6').html(varpop1);
+                create_graphs(resul,mean1,sd1,pop2)
+        }
+    }
+}
+
+// Graph For Standard Deviation
+function create_graphs(sample,mean,std,popstd)
+{
+    var divid='chart1';
+    var ctype='column';
+    var title='Standard Deviation';
+    var xtitle='';
+    var ytitle='';
+    var xval = ['Sample', 'Population'];
+    var yval = new Array();
+
+    sample.push(mean);
+    var population = sample.slice();
+    var sampmaxstd = easyRoundOf((mean+std),3);
+    var sampminstd = easyRoundOf((mean-std),3);
+    sample.push(sampmaxstd);
+    sample.push(sampminstd);
+    sample.sort(sortNumber);
+
+    var popmaxstd = easyRoundOf((mean+popstd),3);
+    var popminstd = easyRoundOf((mean-popstd),3);
+    population.push(popmaxstd);
+    population.push(popminstd);
+    population.sort(sortNumber);
+
+    incs = 1;
+    for(pq=0; pq<sample.length; pq++)
+    {
+        if(sample[pq] == mean)
+        {
+            yval['Mean'] = sample[pq]+','+population[pq];
+        }
+        else if(sample[pq] == sampminstd)
+        {
+            yval['Minimum SD'] = sample[pq]+','+population[pq];
+        }
+        else if(sample[pq] == sampmaxstd)
+        {
+            yval['Maximum SD'] = sample[pq]+','+population[pq];
+        }
+        else
+        {
+            yval['Data'+incs] = sample[pq]+','+population[pq];
+            incs++;
+        }
+    }
+    yval.reverse();
+    jquery_drawstd(divid,ctype,title,xtitle,ytitle,xval,yval);
+}
+
+$( document ).ready(function()
+{
+    $('#resultHide').hide();
+});
+
+function checnum(as)
+{
+    var a = as.value;
+    as.value = a.replace(/[^\d.,-]/g, '');
+}
+
+function trimExtraComma()
+{
+    var utext = $('#a11').val().trim();
+    var firstChar = utext.substring(0, utext.length);
+    if(firstChar == ',')
+    {
+        utext = utext.substring(1);
+    }
+    utext = trimContinuousSymbols(utext.replace(/,+(?=,)/g,''),'.');
+    utext = utext.replace('.,',',');
+
+    $('#a11').val(utext);
+}
+
+function sortNumber(a,b)
+{
+    return b - a;
+}
+
+function clearAll()
+{
+    $('#resultHide').hide();
+}
+
+</script>   <script type="text/javascript">
+    function alert(val)
+    {
+        $("#dynErrDisp").show();
+        $("#dynErrDisp").html(val);
+    }
+    $(document).ready(function() {
+      closeModal();
+    });
+    </script>
+
+<script type="text/javascript">
+    var chf_sess = "";
+    var chf_sess_mail = "";
+    var chf_sess_mobile = "";
+</script>
+
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+</body>
+</html>

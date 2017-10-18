@@ -1,0 +1,132 @@
+<html>
+
+<body>
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Binomial Coefficient Calculator</h3>
+                    <hr>
+
+                    <form action="" id="stat_one" method="post" class="form-horizontal">
+                        <div id="dispCalcConts">
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div class="row">
+                                        <div class="col-md-4"><label>Enter First integer (n):</label></div>
+                                        <div class="col-md-8"><input type="text" name="n1" class="form-control" id="n1" placeholder="Enter N"></div>
+                                    </div>
+                                </div></div>
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div class="row">
+                                        <div class="col-md-4"><label>Enter Second integer (k):</label></div>
+                                        <div class="col-md-8"><input type="text" name="k1" id="k1" class="form-control" placeholder="Enter K"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="formrow">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4"> <button type="button" onclick="show_box()"  class="btn">Calculate</button></div>
+                                    <div class="col-md-4"></div>
+                                </div>
+                            </div>
+                            <div class='result'>
+                                <div class='group clearfix'>
+                                    <div class="col-md-4"><label>Answer :</label></div>
+                                    <div class="col-md-8"> <lable class="form-control"  id="final_ans" style="font-weight: bold;" readonly></lable></div>
+                                </div>
+                            </div></div>
+                    </form>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+      function show_box()
+      {
+
+        var n=$('#n1').val();
+        var k=$('#k1').val();
+
+        var fact=1;
+        for(var i=n;i>1;i--)
+         { fact*=i; }
+
+       var top=fact;
+
+       var fact1=1;
+       for(var i=k;i>1;i--)
+         { fact1*=i; }
+
+       var k2=n-k;
+
+       var fact2=1;
+       for(var i=k2;i>1;i--)
+         { fact2*=i; }
+
+
+       var bottom= fact1*fact2;
+       var final=top/bottom;
+       $('#final_ans').html(final);
+
+     }
+   </script>
+
+
+
+<script type="text/javascript">
+     $('#stat_one').bootstrapValidator({
+      feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+      },
+      fields: {
+        n1: {
+          verbose: false,
+          validators: {
+            notEmpty: {
+              message: 'Enter N.'
+            }
+          }
+        },
+        k1: {
+          verbose: false,
+          validators: {
+            notEmpty: {
+              message: 'Enter k.'
+            }
+          }
+        },
+
+      }
+    });
+  </script>
+
+
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+
+</body>
+</html>

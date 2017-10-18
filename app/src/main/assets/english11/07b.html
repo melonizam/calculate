@@ -1,0 +1,183 @@
+<html>
+
+
+<body>
+<div class="col-md-9 col-sm-12">
+    <ul class="searchList">
+        <li>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3>Binomial Probability Calculator</h3>
+                    <hr>
+
+                    <form action="" id="stat_one" method="post" class="form-horizontal">
+
+                        <div id="dispCalcConts">
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div class="row">
+                                        <div class="col-md-4"><label>Enter the Number of Events (n):</label></div>
+                                        <div class="col-md-8"><input type=text class="form-control" id=nb onkeyup=check(this)></div>
+                                    </div>
+                                </div></div>
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div class="row">
+                                        <div class="col-md-4"><label>Enter the Number of Success (r):</label></div>
+                                        <div class="col-md-8"><input type=text id=rb class="form-control" onkeyup=check(this)></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='group clearfix'>
+                                <div class="formrow">
+                                    <div class="row">
+                                        <div class="col-md-4"><label>Enter the Probability of Success (p):</label></div>
+                                        <div class="col-md-8"><input type=text id=pb class="form-control" onkeyup=check(this)></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="formrow">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4"> <button type="button" onClick=bin()  class="btn">Calculate</button></div>
+                                    <div class="col-md-4"></div>
+                                </div>
+                            </div>
+
+                            <div class='result'>
+                                <div class='group clearfix'>
+                                    <div class="col-md-4"><label>Answer :</label></div>
+                                    <div class="col-md-8"> <input type=text class="form-control" style="border: none;font-weight: bold;" id=bb readonly></div>
+                                </div>
+                            </div></div>
+                    </form>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://www.easycalculation.com/js/jquery.min.js?v0.1"></script>
+<script src='https://www.easycalculation.com/common.js?v4.4'></script>
+<script src='https://www.easycalculation.com/js/jquery.sticky.js'></script>
+<!--script src='//www.easycalculation.com/fact-slider.js'></script-->
+<script type='text/javascript'>
+ 				function check(ad)
+ 				{
+ 					var ch=ad.value;
+ 					if(isNaN(ch))
+ 					{
+ 						var df=ch.substring(0,(ch.length-1))
+ 						ad.value=df;
+ 					}
+ 				}
+
+
+
+ 				function bin()
+ 				{
+ 					var a=$('#nb').val();
+ 					var b=$('#rb').val();
+ 					var c=$('#pb').val();
+ 					if(a == '')
+ 					{
+ 						alert('Enter the number of events');
+ 						return false;
+ 					}
+ 					else if(b == '')
+ 					{
+ 						alert('Enter the number of success');
+ 						return false;
+ 					}
+ 					else if(c == '')
+ 					{
+ 						alert('Enter the Probability of success');
+ 						return false;
+ 					}
+ 					else
+ 					{
+ 						a=parseFloat(a);
+ 						b=parseFloat(b);
+ 						c=parseFloat(c);
+ 						if(c>1)
+ 						{
+ 							alert('The probability of success must be between 0 and 1');
+ 						}
+ 						else if(b>a)
+ 						{
+ 							alert('Number of success r should be less than number of events n');
+ 						}
+ 						else
+ 						{
+ 							var z=1;
+ 							for(var i=a; i>=1; i--)
+ 							{
+ 								z=z*i;
+
+ 							}
+ 							var x=1;
+ 							for(var k=b;k>=1;k--)
+ 							{
+ 								x=x*k;
+ 							}
+
+ 							var s=a-b;
+ 							var t=1;
+ 							for(var j=s;j>=1;j--)
+ 							{
+ 								t=t*j;
+ 							}
+
+ 							var p=z/t;
+
+ 							var y=p/x;
+ 							var d=1-c;
+ 							var e=a-b;
+ 							var f=Math.pow(c,b);
+ 							var g=Math.pow(d,e);
+
+ 							var res=y*f*g;
+ 							if(res=='Infinity')
+ 							{
+ 								res = 0;
+ 							}
+ 							$('#bb').val(res.toFixed(7));
+ 						}
+ 					}
+ 				}
+ 			</script>   <script type="text/javascript">
+ 			function alert(val)
+ 			{
+ 				$("#dynErrDisp").show();
+ 				$("#dynErrDisp").html(val);
+ 			}
+ 			$(document).ready(function() {
+ 				closeModal();
+ 			});
+ 		</script>
+
+<script type="text/javascript">
+ 			var chf_sess = "";
+ 			var chf_sess_mail = "";
+ 			var chf_sess_mobile = "";
+ 		</script>
+
+<style type="text/css">
+  .lii
+  {
+    color:white;
+  }
+  ul li
+  {
+        list-style: none;
+  }
+
+</style>
+
+</body>
+</html>
